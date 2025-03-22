@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: 'naymur rahman',
-      url: 'https://naymur-rahman.com/',
+      name: 'Vaibhav Kesarwani',
+      url: 'https://vaibhavkesarwani.vercel.app/',
     },
   ],
-  creator: 'naymur',
+  creator: 'Vaibhav Kesarwani',
   openGraph: {
     type: 'website',
     locale: 'en_US',
