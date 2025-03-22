@@ -100,7 +100,7 @@ function HeroSec() {
               href='https://www.ui-layout.com/'
               className='flex items-center gap-2 w-fit  text-white bg-gradient-to-l from-[#6175f8]  to-[#334cec] border sm:px-4 px-2 rounded-sm py-2 '
             >
-              Visit UILayout
+              Visit VectorUI
               <MoveRight />
             </a>
             <a href='/get-started' className='sm:inline-block hidden'>
