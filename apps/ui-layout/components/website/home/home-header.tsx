@@ -70,7 +70,7 @@ function HomeHeader() {
             <GitHubButton />
             <a
               target='_blank'
-              href='https://x.com/naymur_dev'
+              href='https://x.com/Vaibhav_k__'
               className='border bg-primary flex-shrink-0   text-primary-foreground text-2xl w-14   grid  place-content-center    rounded-md'
             >
               <svg
