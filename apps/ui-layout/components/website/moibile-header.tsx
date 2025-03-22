@@ -17,7 +17,6 @@ function MobileHeader({ classname }: { classname?: string }) {
         className={cn(classname, 'text-3xl')}
         onClick={() => setSidebarOpen(true)}
       >
-        {/* <HiOutlineMenuAlt2 /> */}
         <svg
           width='642'
           height='421'
@@ -75,7 +74,6 @@ function MobileHeader({ classname }: { classname?: string }) {
               <X />
             </button>
           </figure>
-          {/* <GitHubButton /> */}
 
           <ScrollArea className='h-[95%] py-4 pb-12'>
             <ul className='pb-3'>
