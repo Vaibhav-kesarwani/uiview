@@ -5,7 +5,7 @@ function HomeBuyMeCoffee({ classname }: { classname?: string }) {
   return (
     <>
       <a
-        href='https://buymeacoffee.com/uilayouts'
+        href='https://buymeacoffee.com/vaibhavkesarwani'
         target='_blank'
         className={cn(
           ' relative group w-full mx-auto cursor-pointer h-full grid place-content-center p-10 py-14  rounded-md  overflow-hidden',
