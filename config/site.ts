@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "vector/ui",
-  url: "example URL",
+  url: "https://vaibhavkesarwani.vercel.app/",
   ogImage: "Website Image",
   description:
     "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
