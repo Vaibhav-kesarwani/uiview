@@ -11,4 +11,7 @@
   "tailwindCSS.experimental.classRegex": [
     ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+},
 }
