@@ -19,7 +19,7 @@ const themesTabs = (isMobile: boolean) => [
     id: "heroui",
     title: () => (
       <p className="group-data-[selected=true]:text-foreground group-data-[selected=true]:font-medium">
-        HeroUI
+        VectorUI
       </p>
     ),
     icon: () => (

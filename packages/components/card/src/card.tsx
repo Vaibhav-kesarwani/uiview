@@ -26,6 +26,6 @@ const Card = forwardRef<"div", CardProps>((props, ref) => {
   );
 });
 
-Card.displayName = "HeroUI.Card";
+Card.displayName = "VectorUI.Card";
 
 export default Card;

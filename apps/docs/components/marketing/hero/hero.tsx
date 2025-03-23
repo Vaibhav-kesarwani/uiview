@@ -41,9 +41,9 @@ export const Hero = () => {
             color="primary"
             href="/blog/v2.7.0"
             variant="flat"
-            onClick={() => handlePressAnnouncement("HeroUI v2.7.0", "/blog/v2.7.0")}
+            onClick={() => handlePressAnnouncement("VectorUI v2.7.0", "/blog/v2.7.0")}
           >
-            HeroUI v2.7.0&nbsp;
+            VectorUI v2.7.0&nbsp;
             <span aria-label="emoji" role="img">
               🔥
             </span>

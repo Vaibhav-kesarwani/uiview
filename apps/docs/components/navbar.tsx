@@ -193,9 +193,9 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
             color="primary"
             href="/blog/v2.7.0"
             variant="flat"
-            onClick={() => handlePressNavbarItem("HeroUI v2.7.0", "/blog/v2.7.0")}
+            onClick={() => handlePressNavbarItem("VectorUI v2.7.0", "/blog/v2.7.0")}
           >
-            HeroUI v2.7.0&nbsp;
+            VectorUI v2.7.0&nbsp;
             <span aria-label="emoji" role="img">
               🔥
             </span>

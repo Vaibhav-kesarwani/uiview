@@ -30,7 +30,7 @@ export const HeroUIProSection = () => {
       })}
     >
       <div className="flex min-h-[480px]">
-        <div className="w-full w-full relative z-30 flex h-full flex-col items-start justify-center leading-8 pt-4">
+        <div className="w-full relative z-30 flex h-full flex-col items-start justify-center leading-8 pt-4">
           <HeroUIProChip />
           <div className={titleWrapper({class: "mt-2 inline md:block"})}>
             <h1 className={title({size: "lg", class: "[text-shadow:_0_3px_0_rgb(0_0_0_/_10%)]"})}>
