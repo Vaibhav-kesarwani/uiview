@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { META_THEME_COLORS, siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,20 +71,39 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: META_THEME_COLORS.light,
+};
+
+interface RootLayoutProps {
+  children: React.ReactNode;
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              try {
+                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+                }
+              } catch (_) {}
+            `,
+            }}
+          />
+        </head>
+        <body
+          className={cn(
+            "min-h-svh bg-background font-sans antialiased",
+            geistSans.variable,
+            geistMono.variable
+          )}
+        >
+          {children}
+        </body>
+      </html>
+    </>
   );
 }
