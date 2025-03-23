@@ -318,7 +318,7 @@ function HeroSec() {
               Deserve!
             </h1>
             <p className='mx-auto 2xl:w-[500px] lg:w-[450px] 2xl:text-lg  sm:w-[80%] text-center sm:text-base text-sm'>
-              50+ Free beautifull interactive react/nextjs component based on
+              Unique Free beautifull interactive nextjs component based on
               tailwindcss, framer-motion, gsap, threejs etc
             </p>
             <div className='flex gap-2 justify-center items-center'>
