@@ -1,26 +1,26 @@
 {
-  "name": "heroui",
+  "name": "vectorui",
   "private": true,
   "version": "2.0.0",
   "license": "MIT",
-  "author": "HeroUI <support@heroui.com>",
+  "author": "VectorUI <support@vectorui.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroui-inc/heroui"
+    "url": "https://github.com/Vaibhav-kesarwani"
   },
   "scripts": {
-    "dev": "pnpm sb",
-    "build": "turbo build --filter='!@heroui/docs' --filter='!@heroui/storybook' --filter='!@heroui/stories-utils' --filter='!@heroui/test-utils'",
-    "build:fast": "turbo build:fast --filter='!@heroui/docs' --filter='!@heroui/storybook' --filter='!@heroui/stories-utils' --filter='!@heroui/test-utils'",
-    "dev:docs": "turbo dev --filter=@heroui/docs",
-    "build:docs": "turbo build --filter=@heroui/docs",
+    "dev": "turbo dev --filter=@vectorui/docs",
+    "build": "turbo build --filter='!@vectorui/docs' --filter='!@vectorui/storybook' --filter='!@vectorui/stories-utils' --filter='!@vectorui/test-utils'",
+    "build:fast": "turbo build:fast --filter='!@vectorui/docs' --filter='!@vectorui/storybook' --filter='!@vectorui/stories-utils' --filter='!@vectorui/test-utils'",
+    "dev:docs": "pnpm sb",
+    "build:docs": "turbo build --filter=@vectorui/docs",
     "build:docs-meta": "node ./scripts/update-index-docs.js",
-    "start:docs": "turbo start --filter=@heroui/docs",
-    "deploy:docs": "pnpm --filter @heroui/docs deploy",
-    "deploy:stage-docs": "pnpm --filter @heroui/docs deploy:stage",
-    "sb": "pnpm --filter @heroui/storybook dev",
-    "build:sb": "pnpm --filter @heroui/storybook build",
-    "start:sb": "pnpm --filter @heroui/storybook start",
+    "start:docs": "turbo start --filter=@vectorui/docs",
+    "deploy:docs": "pnpm --filter @vectorui/docs deploy",
+    "deploy:stage-docs": "pnpm --filter @vectorui/docs deploy:stage",
+    "sb": "pnpm --filter @vectorui/storybook dev",
+    "build:sb": "pnpm --filter @vectorui/storybook build",
+    "start:sb": "pnpm --filter @vectorui/storybook start",
     "test": "jest --verbose --config ./jest.config.js",
     "test:strict": "cross-env STRICT_MODE=true pnpm test",
     "typecheck": "turbo typecheck",
@@ -49,7 +49,7 @@
     "release": "changeset publish",
     "version:canary": "changeset version --snapshot canary",
     "release:canary": "changeset publish --snapshot --no-git-tag --tag canary",
-    "postinstall": "husky install && pnpm --filter @heroui/theme build"
+    "postinstall": "husky install && pnpm --filter @vectorui/theme build"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
