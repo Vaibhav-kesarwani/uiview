@@ -1,104 +1,66 @@
-import type { Metadata, Viewport } from "next";
-import "./globals.css";
-import { META_THEME_COLORS, siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
-import { fontMono, fontSans } from "@/lib/fonts";
+import "@/styles/globals.css";
+import { Metadata, Viewport } from "next";
+import { Link } from "@heroui/link";
+import clsx from "clsx";
+
+import { Providers } from "./providers";
+
+import { siteConfig } from "@/config/site";
+import { fontSans } from "@/config/fonts";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
-  metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Jest",
-    "Server Components",
-    "Vercel",
-    "shadcn UI",
-  ],
-  authors: [
-    {
-      name: "Vaibhav Kesarwani",
-      url: "https://vaibhavkesarwani.vercel.app/",
-    },
-  ],
-  creator: "Vaibhav Kesarwani",
-  publisher: "Vaibhav Kesarwani",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
-    images: [
-      {
-        url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [siteConfig.ogImage],
-    creator: "@Vaibhav_k__",
-  },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
 };
 
 export const viewport: Viewport = {
-  themeColor: META_THEME_COLORS.light,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
-interface RootLayoutProps {
+export default function RootLayout({
+  children,
+}: {
   children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+}) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              try {
-                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
-                }
-              } catch (_) {}
-            `,
-            }}
-          />
-        </head>
-        <body
-          className={cn(
-            "min-h-svh bg-background font-sans antialiased",
-            fontSans.variable,
-            fontMono.variable
-          )}
-        >
-          <div vaul-drawer-wrapper="">
-            <div className="relative flex min-h-svh flex-col bg-background">
+    <html suppressHydrationWarning lang="en">
+      <head />
+      <body
+        className={clsx(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable,
+        )}
+      >
+        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+          <div className="relative flex flex-col h-screen">
+            <Navbar />
+            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
-            </div>
+            </main>
+            <footer className="w-full flex items-center justify-center py-3">
+              <Link
+                isExternal
+                className="flex items-center gap-1 text-current"
+                href="https://heroui.com?utm_source=next-app-template"
+                title="heroui.com homepage"
+              >
+                <span className="text-default-600">Powered by</span>
+                <p className="text-primary">HeroUI</p>
+              </Link>
+            </footer>
           </div>
-        </body>
-      </html>
-    </>
+        </Providers>
+      </body>
+    </html>
   );
 }
