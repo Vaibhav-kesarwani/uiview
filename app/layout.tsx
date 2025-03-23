@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { siteConfig } from "@/config/site";
+import { META_THEME_COLORS, siteConfig } from "@/config/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,6 +68,10 @@ export const metadata: Metadata = {
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
 };
+
+export const viewport: Viewport = {
+  themeColor: META_THEME_COLORS.light,
+}
 
 export default function RootLayout({
   children,
