@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "vector/ui",
+  name: "vector ui",
   url: "https://vaibhavkesarwani.vercel.app/",
   ogImage: "Website Image",
   description:
