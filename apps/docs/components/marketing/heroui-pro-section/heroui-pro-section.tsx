@@ -87,7 +87,7 @@ export const HeroUIProSection = () => {
       <div className="hidden md:block w-screen">
         <Marquee
           vertical
-          className="hidden md:block relative flex overflow-visible items-center min-h-[480px]"
+          className="md:block relative flex overflow-visible items-center min-h-[480px]"
           duration={90}
           wrapperClassName="absolute md:top-24 -left-[47%] w-[1000px]"
         >
