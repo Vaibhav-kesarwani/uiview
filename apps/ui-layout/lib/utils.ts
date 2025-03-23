@@ -47,15 +47,15 @@ export function throttle(fn: (...args: any[]) => any, wait: number) {
 }
 
 export const siteConfig = {
-  name: 'ui-layouts',
+  name: 'Vector UI',
   url: 'https://ui-layouts.com',
   ogImage: 'https://www.ui-layouts.com/og.jpg',
   description:
     'Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.',
   links: {
-    twitter: 'https://twitter.com/naymur_dev',
-    linkedin: 'https://www.linkedin.com/in/naymur-rahman',
-    github: 'https://github.com/naymurdev',
+    twitter: 'https://x.com/Vaibhav_k__',
+    linkedin: 'https://www.linkedin.com/in/vaibhav-kesarwani-9b5b35252/',
+    github: 'https://github.com/Vaibhav-kesarwani',
   },
 };
 
