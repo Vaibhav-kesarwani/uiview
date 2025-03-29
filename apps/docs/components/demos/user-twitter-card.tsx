@@ -24,11 +24,13 @@ export const UserTwitterCard = ({className}: UserTwitterCardProps) => {
             }}
             radius="full"
             size="md"
-            src="/avatars/avatar-1.webp"
+            src="/avatars/vaibhav.jpeg"
           />
           <div className="flex flex-col items-start justify-center">
-            <h4 className="text-sm font-semibold leading-none text-default-600">Zoey Lang</h4>
-            <h5 className="text-sm tracking-tight text-default-400">@zoeylang</h5>
+            <h4 className="text-sm font-semibold leading-none text-default-600">
+              Vaibhav Kesarwani
+            </h4>
+            <h5 className="text-sm tracking-tight text-default-400">@vaibhavkesarwani</h5>
           </div>
         </div>
         <Button
@@ -44,7 +46,7 @@ export const UserTwitterCard = ({className}: UserTwitterCardProps) => {
       </CardHeader>
       <CardBody className="px-3 py-0">
         <p className="text-sm pl-px text-default-400">
-          Full-stack developer, @hero_ui lover she/her&nbsp;
+          Full-stack developer, App Developer & UI/UX Desginer&nbsp;
           <span aria-label="confetti" role="img">
             🎉
           </span>
