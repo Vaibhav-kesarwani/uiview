@@ -44,15 +44,15 @@ export const metadata: Metadata = {
   openGraph: siteConfig.openGraph,
   authors: [
     {
-      name: "hero_ui",
-      url: "https://x.com/hero_ui",
+      name: "vector_ui",
+      url: "https://x.com/",
     },
   ],
-  creator: "heroui-inc",
+  creator: "Vaibhav Kesarwani",
   alternates: {
-    canonical: "https://heroui.com",
+    canonical: "https://vaibhavkesarwani.vercel.app",
     types: {
-      "application/rss+xml": [{url: "https://heroui.com/feed.xml", title: "HeroUI RSS Feed"}],
+      "application/rss+xml": [{url: "https://vectorui.com/feed.xml", title: "VectorUI RSS Feed"}],
     },
   },
 };
