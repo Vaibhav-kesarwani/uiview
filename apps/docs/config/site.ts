@@ -1,25 +1,25 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
+  name: "VectorUI - Beautiful, fast and modern React UI Library",
   description: "Make beautiful websites regardless of your design experience.",
   ogImage: "https://heroui.com/heroui.jpg",
-  author: "Junior Garcia",
-  email: "jrgarciadev@gmail.com",
-  siteUrl: "https://heroui.com",
-  creator: "@hero_ui",
+  author: "Vaibhav Kesarwani",
+  email: "vaibhavkesarwani100@gmail.com",
+  siteUrl: "https://vectorui.vercel.app",
+  creator: "@vaibhavkesarwani",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://heroui.com",
-    siteName: "HeroUI (Previously NextUI)",
+    url: "https://vectorui.vercel.app",
+    siteName: "VectorUI",
     description: "Beautiful, fast and modern React UI Library",
     images: [
       {
         url: "https://heroui.com/heroui.jpg",
         width: 1200,
         height: 630,
-        alt: "HeroUI (Previously NextUI)",
+        alt: "VectorUI",
       },
     ],
   },
@@ -31,11 +31,11 @@ export const siteConfig = {
     creator: "@hero_ui",
   },
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://x.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
-    portfolio: "https://jrgarciadev.com",
+    github: "https://github.com/Vaibhav-kesarwani/vector-ui",
+    twitter: "https://twitter.com/Vaibhav_k__",
+    docs: "https://vectorui.vercel.app",
+    discord: "https://discord.gg/",
+    sponsor: "https://github.com/Vaibhav-kesarwani",
+    portfolio: "https://vaibhavkesarwani.vercel.app/",
   },
 };
