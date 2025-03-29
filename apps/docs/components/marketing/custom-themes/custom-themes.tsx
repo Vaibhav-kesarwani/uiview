@@ -10,7 +10,7 @@ import {shopCartStyles} from "./styles";
 
 import {title, subtitle, titleWrapper, sectionWrapper} from "@/components/primitives";
 import {PaletteIcon, MagicIcon, GamingConsoleIcon, StarIcon} from "@/components/icons";
-import {HeroUILogo, CodeWindow} from "@/components";
+import {VectorUILogo, CodeWindow} from "@/components";
 import landingContent from "@/content/landing";
 import {useIsMobile} from "@/hooks/use-media-query";
 
@@ -23,7 +23,7 @@ const themesTabs = (isMobile: boolean) => [
       </p>
     ),
     icon: () => (
-      <HeroUILogo
+      <VectorUILogo
         outlined
         className="text-default-400 group-data-[selected=true]:text-foreground"
         size={isMobile ? 34 : 44}
