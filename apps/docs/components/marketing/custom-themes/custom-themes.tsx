@@ -240,7 +240,7 @@ export const CustomThemes = () => {
             </div>
           </div>
           <p className={subtitle()}>
-            HeroUI provides a custom TailwindCSS plugin that allows you to customize the default
+            VectorUI provides a custom TailwindCSS plugin that allows you to customize the default
             themes or create your own.
           </p>
         </div>

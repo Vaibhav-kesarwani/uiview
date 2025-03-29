@@ -85,7 +85,7 @@ export const Hero = () => {
           >
             Get Started
           </Button>
-          <Snippet
+          {/* <Snippet
             className="hidden w-full rounded-full md:flex sm:w-auto"
             copyButtonProps={{
               radius: "full",
@@ -100,7 +100,7 @@ export const Hero = () => {
             }}
           >
             npx heroui-cli@latest init
-          </Snippet>
+          </Snippet> */}
           <Button
             fullWidth
             isExternal
