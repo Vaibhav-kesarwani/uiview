@@ -31,7 +31,7 @@ export const Hero = () => {
   return (
     <section className="flex relative overflow-hidden lg:overflow-visible w-full flex-nowrap justify-between items-center h-[calc(100vh_-_64px)] 2xl:h-[calc(84vh_-_64px)]">
       <div className="relative z-20 flex flex-col w-full gap-6 lg:w-1/2 xl:mt-10">
-        <div className="flex justify-center w-full md:hidden">
+        {/* <div className="flex justify-center w-full md:hidden">
           <Chip
             as={NextLink}
             className="bg-default-200/50 border-1 hover:bg-default-200/80 border-default-400/50 cursor-pointer"
@@ -48,7 +48,7 @@ export const Hero = () => {
               🔥
             </span>
           </Chip>
-        </div>
+        </div> */}
         <div className="leading-8 text-center md:leading-10 md:text-left">
           <div className="inline-block">
             <h1 className={title()}>Make&nbsp;</h1>

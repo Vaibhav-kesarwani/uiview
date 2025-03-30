@@ -183,8 +183,8 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
             <SmallLogo className="w-6 h-6 md:hidden" />
             <LargeLogo className="h-5 md:h-6" />
           </NextLink>
-          {versionChip}
-          <Chip
+          {/* {versionChip} */}
+          {/* <Chip
             as={NextLink}
             className="hidden sm:flex bg-default-200/50 border-1 hover:bg-default-200/80 border-default-400/50 cursor-pointer"
             classNames={{
@@ -199,7 +199,7 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
             <span aria-label="emoji" role="img">
               🔥
             </span>
-          </Chip>
+          </Chip> */}
         </NavbarBrand>
       </NavbarContent>
 
