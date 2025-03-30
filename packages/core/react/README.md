@@ -1,7 +1,7 @@
 <p align="center">
-  <a href="https://heroui.com">
-      <img width="20%" src="https://raw.githubusercontent.com/heroui-inc/heroui/main/apps/docs/public/isotipo.png" alt="heorui" />
-      <h1 align="center">HeroUI</h1>
+  <a href="https://vectorui.vercel.app">
+      <img width="20%" src="https://raw.githubusercontent.com/heroui-inc/heroui/main/apps/docs/public/isotipo.png" alt="vectorui" />
+      <h1 align="center">VectorUI</h1>
   </a>
 </p>
 </br>
