@@ -1,8 +1,8 @@
-import {DiscordIcon, GithubIcon, XIcon} from "@/components/icons";
+import {GithubIcon, MagicIcon, XIcon} from "@/components/icons";
 import {siteConfig} from "@/config/site";
 
-export const TWITTER_USER_NAME = "hero_ui";
-export const SITE_URL = "https://heroui.com";
+export const TWITTER_USER_NAME = "Vaibhav_k__";
+export const SITE_URL = "https://vectorui.vercel.app";
 
 export const communityAccounts = [
   {
@@ -13,10 +13,10 @@ export const communityAccounts = [
     isExternal: true,
   },
   {
-    title: "Discord",
-    description: "To get involved in the community, ask questions and share tips.",
-    icon: <DiscordIcon className="text-[#7289DA]" size={32} />,
-    href: siteConfig.links.discord,
+    title: "Potfolio",
+    description: "To showcase my future projects and get inspired by others.",
+    icon: <MagicIcon className="text-[#333] dark:text-[#E7E7E7]" size={28} />,
+    href: siteConfig.links.portfolio,
     isExternal: true,
   },
   {
