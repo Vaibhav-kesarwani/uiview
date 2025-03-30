@@ -269,7 +269,6 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
             </NextLink>
           </NavbarItem>
           {/* 
-          // TODO: add playground
           <NavbarItem>
             <NextLink
               className={navLinkClasses}
@@ -304,7 +303,7 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
             </NextLink>
           </NavbarItem>
 
-          <NavbarItem>
+          {/* <NavbarItem>
             <NextLink
               className={navLinkClasses}
               color="foreground"
@@ -314,7 +313,7 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
             >
               Theme
             </NextLink>
-          </NavbarItem>
+          </NavbarItem> */}
           {/* <NavbarItem>
             <FbRoadmapLink className={navLinkClasses} />
           </NavbarItem> */}
