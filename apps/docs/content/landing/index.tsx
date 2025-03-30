@@ -186,11 +186,11 @@ import {VectorUIProvider} from "@vectorui/react";
 
 const Application = ({Component, pageProps}) => {
   return (
-    <HeroUIProvider>
+    <VectorUIProvider>
       <main className={isDark ? "dark" : "light"}>
         <Component {...pageProps} />
       </main>
-    </HeroUIProvider>
+    </VectorUIProvider>
   );
 };
 
