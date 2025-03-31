@@ -3,7 +3,7 @@
 import {usePostHog} from "posthog-js/react";
 import NextLink from "next/link";
 
-export const HeroUIProCallout = () => {
+export const VectorUIProCallout = () => {
   const posthog = usePostHog();
 
   const handleClick = () => {
@@ -27,7 +27,7 @@ export const HeroUIProCallout = () => {
           components
         </p>
         <p className="text-center text-xs mt-2 px-3 font-medium text-default-500 dark:text-default-400 leading-tight">
-          Discover 210+ stunning components by HeroUI
+          Discover new stunning components by VectorUI
         </p>
       </div>
       <div className="mt-3 w-fit flex group items-center text-foreground hover:shadow-sm relative overflow-hidden rounded-full p-[2px]">
