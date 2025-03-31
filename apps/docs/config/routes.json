@@ -17,12 +17,6 @@
           "title": "Design Principles",
           "keywords": "design principles, vectorui",
           "path": "/docs/guide/design-principles.mdx"
-        },
-         {
-          "key": "figma",
-          "title": "Figma",
-          "keywords": "figma, design, ui kit",
-          "path": "/docs/guide/figma.mdx"
         }
       ]
     },
