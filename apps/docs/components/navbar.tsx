@@ -280,7 +280,7 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
               Playground
             </NextLink>
           </NavbarItem> */}
-          <NavbarItem>
+          {/* <NavbarItem>
             <NextLink
               className={navLinkClasses}
               color="foreground"
@@ -290,7 +290,7 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
             >
               Figma
             </NextLink>
-          </NavbarItem>
+          </NavbarItem> */}
           <NavbarItem>
             <NextLink
               className={navLinkClasses}
