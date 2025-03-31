@@ -2,7 +2,7 @@ import {Image} from "@heroui/react";
 
 import manifest from "@/config/routes.json";
 import {DocsSidebar} from "@/components/docs/sidebar";
-import {ScriptProviders} from "@/components/scripts/script-providers";
+// import {ScriptProviders} from "@/components/scripts/script-providers";
 
 interface DocsLayoutProps {
   children: React.ReactNode;
@@ -40,7 +40,7 @@ export default function DocsLayout({children}: DocsLayoutProps) {
         />
       </div>
 
-      <ScriptProviders />
+      {/* <ScriptProviders /> */}
     </>
   );
 }
