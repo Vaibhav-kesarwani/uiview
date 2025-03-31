@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: VectorUI is a UI library for React that helps you build beautiful and accessible user interfaces. Created on top of Tailwind CSS and React Aria.
+description: VectorUI is a React UI library that enables you to create visually appealing and accessible interfaces with ease. Built on top of Tailwind CSS and React Aria.
 ---
 
 # Introduction
@@ -19,97 +19,81 @@ Welcome to the VectorUI documentation!
 
 ## What is VectorUI?
 
-VectorUI is a UI library for React that helps you build beautiful and accessible user interfaces. Created on top of
-[Tailwind CSS](https://v3.tailwindcss.com/) and [React Aria](https://react-spectrum.adobe.com/react-aria/index.html).
+VectorUI is a React UI library designed to help you build aesthetically pleasing and accessible user interfaces efficiently. It leverages
+[Tailwind CSS](https://v3.tailwindcss.com/) and [React Aria](https://react-spectrum.adobe.com/react-aria/index.html) to offer a seamless development experience.
 
-VectorUI's primary goal is to streamline the development process, offering a beautiful and adaptable system design for an enhanced user experience.
+VectorUI's core objective is to simplify the UI development process, providing a flexible and visually cohesive system for an enhanced user experience.
 
 ---
 
 ## FAQ
 
-### Is VectorUI a copy-paste library?
+### Is VectorUI just a collection of pre-built components?
 
-No, VectorUI is not a copy-paste library. All components are available through `npm` and can be installed individually or as a whole package.
+No, VectorUI is not just a collection of pre-built components. It offers fully functional, reusable components available via `npm` soon, allowing developers to install them individually or as a complete package.
 
-### How is VectorUI different from TailwindCSS?
+### How does VectorUI differ from TailwindCSS?
 
 - **TailwindCSS**:
 
   <div className="text-default-600 dark:text-default-500">
-    Tailwind CSS is a CSS Framework that provides atomic CSS classes to help you style components,
-    leaving you to handle lots of other things like accessibility, component composition, keyboard
-    navigation, style overrides, etc.
+    Tailwind CSS is a utility-first CSS framework that provides atomic classes for styling elements. However, developers need to manage accessibility, component logic, keyboard interactions, and style overrides manually.
   </div>
 
 - **VectorUI**:
   <div className="text-default-600 dark:text-default-500">
-    VectorUI is a UI library for React that combines the power of TailwindCSS with React Aria to
-    provide complete components (logic and styles) for building accessible and customizable user
-    interfaces. Since VectorUI uses TailwindCSS as its style engine, you can use all TailwindCSS
-    classes within your VectorUI components, ensuring optimal compiled CSS size.
+    VectorUI extends TailwindCSS with pre-built components powered by React Aria, offering both styling and built-in accessibility. Since VectorUI is based on TailwindCSS, you can seamlessly apply Tailwind classes to its components while maintaining optimal CSS output.
   </div>
 
-### How is VectorUI different from TailwindCSS components libraries?
+### How does VectorUI compare to other TailwindCSS component libraries?
 
 <div className="text-default-600 dark:text-default-500">
-  TailwindCSS components libraries such as [TailwindUI](https://tailwindui.com/),
-  [Flowbite](https://flowbite.com/), or [Preline](https://preline.co/), just to name a few, only offer a curated selection of TailwindCSS classes to style your components.
-  They don't provide any React specific components, logic, props, composition, or accessibility features.<br/>
+  TailwindCSS component libraries like [TailwindUI](https://tailwindui.com/), [Flowbite](https://flowbite.com/), and [Preline](https://preline.co/) provide curated class-based UI elements but lack built-in component logic, React-specific props, and accessibility enhancements.<br/>
   <Spacer y={2}/>
-  In contrast to these libraries, VectorUI is a complete UI library that provides a set of accessible and
-  customizable components, hooks, and utilities.
+  In contrast, VectorUI delivers a complete UI solution with fully functional React components, utilities, and accessibility features.
 </div>
 
-### How VectorUI deals with TailwindCSS classes conflicts?
+### How does VectorUI handle TailwindCSS class conflicts?
 
 <div className="text-default-600 dark:text-default-500">
-  We created a TailwindCSS utility library called [tailwind-variants](https://www.tailwind-variants.org/) that automatically handles TailwindCSS class conflicts. This ensures your custom classes will
-  consistently override the default ones, eliminating any duplication.
+  We developed [tailwind-variants](https://www.tailwind-variants.org/), a utility library that intelligently resolves TailwindCSS class conflicts. This ensures that your custom styles always take precedence over default styles without redundancy.
 </div>
 
-### Does VectorUI use runtime CSS?
+### Does VectorUI require runtime CSS processing?
 
 <div className="text-default-600 dark:text-default-500">
-  No. As VectorUI uses TailwindCSS as its style engine, it generates CSS at build time, eliminating
-  the need for runtime CSS. This means that VectorUI is fully compatible with the latest React and
-  Next.js versions.
+  No. Since VectorUI utilizes TailwindCSS as its styling engine, all styles are generated at build time. This eliminates the need for runtime CSS and ensures seamless compatibility with the latest versions of React and Next.js.
 </div>
 
 ### Does VectorUI support TypeScript?
 
 <div className="text-default-600 dark:text-default-500">
-  Yes, VectorUI is written in TypeScript and has full support for it.
+  Yes, VectorUI is fully written in TypeScript and provides comprehensive TypeScript support.
 </div>
 
-### Can I use VectorUI with other front-end frameworks or libraries, such as Vue or Angular?
+### Can I use VectorUI with frameworks like Vue or Angular?
 
 <div className="text-default-600 dark:text-default-500">
-  No, VectorUI is specifically designed for React as it is built on top of React Aria. However, you
-  can still use the VectorUI components styling part with other frameworks or libraries.
+  No, VectorUI is specifically built for React, leveraging React Aria. However, you can still apply its styling methodology to other frameworks.
 </div>
 
-### Why does VectorUI use Framer Motion?
+### Why does VectorUI use Framer Motion for animations?
 
 <div className="text-default-600 dark:text-default-500">
-  We use [Framer Motion](https://www.framer.com/motion) to animate some components due to
-  the complexity of the animations and their physics-based nature. Framer Motion allows us to
-  handle these animations in a more straightforward and performant way. In addition, it is
-  well tested and production ready.
+  We integrate [Framer Motion](https://www.framer.com/motion) to handle complex, physics-based animations efficiently. Framer Motion provides a robust, production-ready animation system that enhances user experience with smooth, high-performance transitions.
 </div>
 
 ---
 
 ## Community
 
-We're excited to see the community adopt VectorUI, raise issues, and provide feedback.
-Whether it's a feature request, bug report, or a project to showcase, please get involved!
+We encourage community participation! If you encounter issues, have feature requests, or want to showcase your projects, we'd love to hear from you.
 
 <Community />
 
 ## Contributing
 
-PRs on **VectorUI** are always welcome, please see our [contribution guidelines](https://github.com/heroui-inc/heroui/blob/main/CONTRIBUTING.md) to learn how you can contribute to this project.
+Contributions are always welcome! Please check out our [contribution guidelines](https://github.com/Vaibhav-kesarwani/vector-ui/blob/main/CONTRIBUTING.md) to learn how you can contribute to VectorUI.
 
 <Spacer y={4}/>
 
