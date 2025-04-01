@@ -7,7 +7,7 @@ export const siteConfig = {
   author: "Vaibhav Kesarwani",
   email: "vaibhavkesarwani100@gmail.com",
   siteUrl: "https://vectorui.vercel.app",
-  creator: "@vaibhavkesarwani",
+  creator: "@Vaibhav_k__",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -25,10 +25,10 @@ export const siteConfig = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
+    title: "VectorUI - Beautiful, fast and modern React UI Library",
     description: "Make beautiful websites regardless of your design experience.",
     image: "https://heroui.com/heroui.jpg",
-    creator: "@hero_ui",
+    creator: "@Vaibhav_k__",
   },
   links: {
     github: "https://github.com/Vaibhav-kesarwani/vector-ui",
