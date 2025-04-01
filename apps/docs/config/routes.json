@@ -391,27 +391,6 @@
           "path": "/docs/components/user.mdx"
         }
       ]
-    },
-    {
-      "key": "api-references",
-      "title": "API References",
-      "defaultOpen": true,
-      "keywords": "api references, vectorui, api",
-      "routes": [
-        {
-          "key": "cli-api",
-          "title": "HeroUI CLI",
-          "keywords": "api references, vectorui, api, cli",
-          "path": "/docs/api-references/cli-api.mdx"
-        },
-        {
-          "key": "vectorui-provider",
-          "title": "HeroUIProvider",
-          "keywords": "api references, vectorui, api, vectorui provider",
-          "path": "/docs/api-references/vectorui-provider.mdx",
-          "updated": true
-        }
-      ]
     }
   ],
   "mobileRoutes": [
