@@ -17,6 +17,12 @@
           "title": "Design Principles",
           "keywords": "design principles, vectorui",
           "path": "/docs/guide/design-principles.mdx"
+        },
+        {
+          "key": "installation",
+          "title": "Installation",
+          "keywords": "installation, vectorui",
+          "path": "/docs/guide/installation.mdx"
         }
       ]
     },
