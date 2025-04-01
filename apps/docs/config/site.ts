@@ -34,7 +34,7 @@ export const siteConfig = {
     github: "https://github.com/Vaibhav-kesarwani/vector-ui",
     twitter: "https://twitter.com/Vaibhav_k__",
     docs: "https://vectorui.vercel.app",
-    discord: "https://discord.gg/",
+    discord: "https://discord.gg/VcSKkhph",
     sponsor: "https://github.com/Vaibhav-kesarwani",
     portfolio: "https://vaibhavkesarwani.vercel.app/",
   },
