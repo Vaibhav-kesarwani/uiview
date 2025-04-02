@@ -1,5 +1,5 @@
 import {Spacer} from "@heroui/spacer";
-import {Suspense} from "react";
+// import {Suspense} from "react";
 
 import {Hero} from "@/components/marketing/hero";
 import {FeaturesGrid} from "@/components/marketing/features-grid";
@@ -10,7 +10,7 @@ import {Customization} from "@/components/marketing/customization";
 import {LastButNotLeast} from "@/components/marketing/last-but-not-least";
 import {InstallBanner} from "@/components/marketing/install-banner";
 import {Community} from "@/components/marketing/community";
-import Support from "@/components/marketing/support";
+// import Support from "@/components/marketing/support";
 import landingContent from "@/content/landing";
 // import {HeroUIProSection} from "@/components/marketing/heroui-pro-section";
 
@@ -27,10 +27,10 @@ export default async function Home() {
         <Customization />
         {/* <HeroUIProSection /> */}
         <LastButNotLeast />
-        <Suspense fallback={<div>Loading...</div>}>
+        {/* <Suspense fallback={<div>Loading...</div>}>
           <Support />
-        </Suspense>
-        <Spacer y={24} />
+        </Suspense> */}
+        <Spacer y={10} />
         <InstallBanner />
         <Community />
         <Spacer y={24} />
