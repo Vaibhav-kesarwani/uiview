@@ -12,12 +12,6 @@ export const docsConfig: DocsConfig = {
       href: "/components",
     },
     {
-      title: "Templates",
-      href: "https://pro.magicui.design",
-      event: "header_cta_clicked",
-      label: "New",
-    },
-    {
       title: "Showcase",
       href: "/showcase",
     },
