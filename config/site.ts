@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Beautifully designed landing page components built with React & Tailwind CSS.",
   links: {
-    twitter: "", // twitter
+    twitter: "https://twitter.com/Vaibhav_k__",
     discord: "", // discord
     github: "https://github.com/vector-ui/vectorui/",
     instagram: "https://www.instagram.com/vaibhavkesarwani__/",
