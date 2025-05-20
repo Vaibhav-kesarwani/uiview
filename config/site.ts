@@ -1,14 +1,14 @@
 export const siteConfig = {
-  name: "Magic UI",
-  url: "https://magicui.design",
-  ogImage: "https://magicui.design/og",
+  name: "Vector UI",
+  url: "", // url
+  ogImage: "", // url/og
   description:
     "Beautifully designed landing page components built with React & Tailwind CSS.",
   links: {
-    twitter: "https://twitter.com/magicuidesign",
-    discord: "https://discord.gg/87p2vpsat5",
-    github: "https://github.com/magicuidesign/magicui",
-    instagram: "https://instagram.com/magicuidesign/",
+    twitter: "", // twitter
+    discord: "", // discord
+    github: "https://github.com/vector-ui/vectorui/",
+    instagram: "https://www.instagram.com/vaibhavkesarwani__/",
   },
   keywords: [
     "React",
