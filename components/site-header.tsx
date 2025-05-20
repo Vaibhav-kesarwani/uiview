@@ -9,14 +9,14 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { NumberTicker } from "@/registry/vectorui/number-ticker";
+import { NumberTicker } from "@/registry/magicui/number-ticker";
 
 export async function SiteHeader() {
   let stars = 300; // Default value
 
   try {
     const response = await fetch(
-      "https://api.github.com/repos/vector-ui/vectorui",
+      "https://api.github.com/repos/magicuidesign/magicui",
       {
         headers: process.env.GITHUB_OAUTH_TOKEN
           ? {

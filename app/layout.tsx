@@ -13,7 +13,7 @@ import type { Viewport } from "next";
 import { Metadata } from "next";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Vector UI",
+  title: "Magic UI",
   description:
     "Beautiful UI components and templates to make your landing page look stunning.",
   image: absoluteUrl("/og"),

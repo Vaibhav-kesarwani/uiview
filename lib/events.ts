@@ -6,7 +6,10 @@ const eventSchema = z.object({
     "copy_npm_command",
     "copy_usage_code",
     "copy_source_code",
+    // "copy_primitive_code",
+    // "copy_theme_code",
   ]),
+  // declare type AllowedPropertyValues = string | number | boolean | null
   properties: z
     .record(z.union([z.string(), z.number(), z.boolean(), z.null()]))
     .optional(),

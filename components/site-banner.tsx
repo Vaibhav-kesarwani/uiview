@@ -17,7 +17,7 @@ export function SiteBanner() {
           ✨{" "}
           <span className="ml-1 font-[580] dark:font-[550]">
             {" "}
-            Introducing Vector UI Pro - 50+ blocks and templates to build
+            Introducing Magic UI Pro - 50+ blocks and templates to build
             beautiful landing pages in minutes.
           </span>{" "}
           <ChevronRight className="ml-1 mt-[3px] hidden size-4 transition-all duration-300 ease-out group-hover:translate-x-1 lg:inline-block" />

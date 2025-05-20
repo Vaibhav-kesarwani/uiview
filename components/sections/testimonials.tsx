@@ -1,5 +1,5 @@
 import { ExpandableMasonarySection } from "@/components/sections/expandable-masonary-section";
-import { TweetCard } from "@/registry/vectorui/tweet-card";
+import { TweetCard } from "@/registry/magicui/tweet-card";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 

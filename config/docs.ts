@@ -13,7 +13,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Templates",
-      href: "https://pro.vectorui.design",
+      href: "https://pro.magicui.design",
       event: "header_cta_clicked",
       label: "New",
     },
