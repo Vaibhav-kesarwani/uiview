@@ -84,7 +84,7 @@ export default async function PagePage({ params }: PageProps) {
         {page.title}
       </h2>
       <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-        {page.title} uses Magic UI to build their landing page.
+        {page.title} uses Vector UI to build their landing page.
       </h3>
       <ShowcaseCard
         title={page.title}
