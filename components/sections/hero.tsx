@@ -12,7 +12,7 @@ export default async function Hero() {
   const post = allDocs
     .filter(
       (post) =>
-        post.date && post.date <= new Date().toISOString() && post.published,
+        post.date && post.date <= new Date().toISOString() && post.published
     )
     .sort((a, b) => {
       if (!a.date && !b.date) return 0; // Both dates are undefined, keep original order
@@ -34,7 +34,7 @@ export default async function Hero() {
                     variant: "outline",
                     size: "sm",
                   }),
-                  "rounded-full",
+                  "rounded-full"
                 )}
               >
                 🎉 <Separator className="mx-2 h-4" orientation="vertical" />
@@ -47,24 +47,24 @@ export default async function Hero() {
                     "text-black dark:text-white",
                     "relative mx-0 max-w-[43.5rem]  pt-5  md:mx-auto md:px-4 md:py-2",
                     "text-balance text-left font-semibold tracking-tighter md:text-center",
-                    "text-5xl sm:text-7xl md:text-7xl lg:text-7xl",
+                    "text-5xl sm:text-7xl md:text-7xl lg:text-7xl"
                   )}
                 >
-                  UI library for Design Engineers
+                  UI Library for Aspiring Designers
                 </h1>
               </div>
 
-              <p className="max-w-xl text-balance text-left text-base tracking-tight text-black dark:font-medium dark:text-white md:text-center md:text-lg ">
-                150+ free and open-source animated components and effects built
-                with <b>React</b>, <b>Typescript</b>, <b>Tailwind CSS</b>, and{" "}
-                <b>Motion</b>
+              <p className="max-w-l text-balance text-left text-base tracking-tight text-black dark:font-medium dark:text-white md:text-center md:text-lg ">
+                100+ free and modern animated UI components and effects <br />
+                open-source and built with <b>React</b>, <b>Typescript</b>,{" "}
+                <b>Tailwind CSS</b>, and <b>Motion</b>
                 .
                 <br />
-                Perfect companion for <b>shadcn/ui</b>.
+                Built to blend seamlessly with <b>shadcn/ui</b>.
               </p>
 
-              <div className="mx-0 flex w-full max-w-full flex-col gap-4 py-1 sm:max-w-lg sm:flex-row md:mx-auto">
-                <div className="flex w-full flex-col gap-2 sm:flex-row sm:gap-4">
+              <div className="mx-0 flex w-full max-w-full flex-col gap-4 py-1 sm:max-w-lg sm:flex-row sm:justify-center md:mx-auto">
+                <div className="flex w-1/2 flex-col gap-2 sm:flex-row sm:gap-4 justify-center mx-auto">
                   <Link
                     href="/components"
                     className={cn(
@@ -72,23 +72,10 @@ export default async function Hero() {
                         variant: "rainbow",
                         size: "lg",
                       }),
-                      "w-full gap-2",
+                      "w-full gap-2"
                     )}
                   >
                     Browse Components
-                    <ChevronRight className="ml-1  size-4 shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1" />
-                  </Link>
-                  <Link
-                    href="https://pro.magicui.design"
-                    className={cn(
-                      buttonVariants({
-                        size: "lg",
-                        variant: "rainbow-outline",
-                      }),
-                      "w-full gap-2",
-                    )}
-                  >
-                    Browse Templates
                     <ChevronRight className="ml-1 size-4 shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1" />
                   </Link>
                 </div>
