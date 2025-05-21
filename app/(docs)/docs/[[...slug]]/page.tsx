@@ -40,7 +40,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${doc.title} | Magic UI`,
+    title: `${doc.title} | Vector UI`,
     description: doc.description,
     openGraph: {
       title: doc.title,

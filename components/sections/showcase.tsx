@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import { allShowcases } from "content-collections";
 import Link from "next/link";
