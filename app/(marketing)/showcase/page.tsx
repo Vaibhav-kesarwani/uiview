@@ -1,7 +1,7 @@
 import { allShowcases } from "content-collections";
 
 import { ShowcaseCard } from "@/components/sections/showcase";
-import { BlurFade } from "@/registry/magicui/blur-fade";
+import { BlurFade } from "@/registry/vectorui/blur-fade";
 
 export default function Page() {
   return (

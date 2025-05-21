@@ -1,4 +1,4 @@
-import { ClientTweetCard } from "@/registry/magicui/client-tweet-card";
+import { ClientTweetCard } from "@/registry/vectorui/client-tweet-card";
 
 /**
  * <TweetCard /> (Server Side Only)

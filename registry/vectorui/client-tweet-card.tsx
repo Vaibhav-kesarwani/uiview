@@ -6,7 +6,7 @@ import {
   MagicTweet,
   TweetNotFound,
   TweetSkeleton,
-} from "@/registry/magicui/tweet-card";
+} from "@/registry/vectorui/tweet-card";
 
 export const ClientTweetCard = ({
   id,

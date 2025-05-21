@@ -3,7 +3,7 @@ import { ChevronRightIcon } from "@radix-ui/react-icons";
 import { allShowcases } from "content-collections";
 import Link from "next/link";
 
-import { Marquee } from "@/registry/magicui/marquee";
+import { Marquee } from "@/registry/vectorui/marquee";
 
 export interface ShowcaseCardProps {
   title: string;
