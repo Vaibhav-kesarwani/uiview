@@ -5,5 +5,5 @@ import { ClientTweetCard } from "@/registry/vectorui/client-tweet-card";
  * <ClientTweetCard /> (Client Side Only)
  */
 export default function TweetDemo() {
-  return <ClientTweetCard id="1668408059125702661" />;
+  return <ClientTweetCard id="1923621982832038346" />;
 }
