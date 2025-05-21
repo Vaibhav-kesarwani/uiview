@@ -51,22 +51,6 @@ export function MainNav() {
             </span>
           </Link>
         </ContextMenuTrigger>
-        {/* <ContextMenuContent>
-          <ContextMenuItem
-            className="flex items-center gap-2"
-            onClick={() => copyLogoAsSVG("/icon.svg")}
-          >
-            <Icons.logo className="size-4" />
-            <span>Copy Logo as SVG</span>
-          </ContextMenuItem>
-          <ContextMenuItem
-            className="flex items-center gap-2"
-            onClick={() => copyLogoAsPNG("/icon.png")}
-          >
-            <Icons.logo className="size-4" />
-            <span>Copy Logo as PNG</span>
-          </ContextMenuItem>
-        </ContextMenuContent> */}
       </ContextMenu>
       <div className="mr-5"></div>
       <nav className="hidden items-center space-x-6 text-sm font-medium xl:flex">
