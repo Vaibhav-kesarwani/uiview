@@ -55,8 +55,8 @@ export function absoluteUrl(path: string) {
 }
 
 export function constructMetadata({
-  title = "Magic UI - Modern React + Tailwind CSS components & Templates",
-  description = "Magic UI is a curated collection of the best landing page components built using React + Tailwind CSS + Motion",
+  title = "Vector UI - Modern React + Tailwind CSS components & Templates",
+  description = "Vector UI is a curated collection of the best landing page components built using React + Tailwind CSS + Motion",
   image = absoluteUrl("/og"),
   ...props
 }: {
@@ -93,17 +93,17 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@dillionverma",
+      creator: "@Vaibhav-kesarwani",
     },
     icons: "/favicon.ico",
-    metadataBase: new URL("https://magicui.design"),
+    metadataBase: new URL("https://vectorui.vercel.app"),
     authors: [
       {
-        name: "dillionverma",
-        url: "https://twitter.com/dillionverma",
+        name: "vaibhav",
+        url: "https://twitter.com/Vaibhav_k__",
       },
     ],
-    creator: "dillionverma",
+    creator: "vaibhav",
     ...props,
   };
 }

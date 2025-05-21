@@ -22,8 +22,8 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      // "@/components/magicui/*": [
-      //   "registry/magicui/*"
+      // "@/components/vectorui/*": [
+      //   "registry/vectorui/*"
       // ],
       // "@/components/example/*": [
       //   "registry/example/*"

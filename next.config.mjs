@@ -9,13 +9,13 @@ const nextConfig = {
     optimizeCss: true,
   },
   images: {
-    domains: ["localhost", "cdn.magicui.design"],
+    domains: ["localhost", "cdn.vectorui.design"],
   },
   async redirects() {
     return [
       {
         source: "/discord",
-        destination: "https://discord.gg/X4BBMBjHNf",
+        destination: "https://discord.gg/",
         permanent: true,
       },
       {
