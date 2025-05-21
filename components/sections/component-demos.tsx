@@ -21,7 +21,6 @@ export default function ComponentDemos() {
         Here are some of the awesome components that you can use to build your landing
         pages and portfolio.
       </h3>
-      <Mdx code={page.body.code} />
     </section>
   );
 }
