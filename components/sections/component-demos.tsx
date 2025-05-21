@@ -1,5 +1,3 @@
-import { Mdx } from "@/components/mdx-components";
-
 import { allPages } from "content-collections";
 import { notFound } from "next/navigation";
 
