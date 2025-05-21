@@ -48,7 +48,7 @@ export default function Showcase() {
         Showcase
       </h2>
       <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-        Companies choose Magic UI to build their landing pages.
+        Projects choose Vector UI as the foundation for building their landing pages.
       </h3>
       <div className="relative flex flex-col">
         <Marquee className="max-w-screen [--duration:40s]">
