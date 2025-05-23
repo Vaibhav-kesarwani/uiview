@@ -9,7 +9,7 @@ const nextConfig = {
     optimizeCss: true,
   },
   images: {
-    domains: ["localhost", "cdn.vectorui.design"],
+    domains: ["localhost", "cdn.vectorui.vercel.app"],
   },
   async redirects() {
     return [
@@ -20,7 +20,7 @@ const nextConfig = {
       },
       {
         source: "/components",
-        destination: "/docs/components/marquee",
+        destination: "/docs/components/",
         permanent: true,
       },
       {
@@ -30,7 +30,7 @@ const nextConfig = {
       },
       {
         source: "/docs/components",
-        destination: "/docs/components/marquee",
+        destination: "/docs/components/",
         permanent: true,
       },
       {
