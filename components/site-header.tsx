@@ -77,23 +77,6 @@ export async function SiteHeader() {
           </div>
           <nav className="flex items-center gap-1">
             <Link
-              href={siteConfig.links.discord}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0",
-                )}
-              >
-                <Icons.discord className="size-4" />
-                <span className="sr-only">Discord</span>
-              </div>
-            </Link>
-            <Link
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
@@ -108,23 +91,6 @@ export async function SiteHeader() {
               >
                 <Icons.gitHub className="size-4" />
                 <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0",
-                )}
-              >
-                <Icons.twitter className="size-4 fill-current" />
-                <span className="sr-only">Twitter</span>
               </div>
             </Link>
             <ModeToggle />

@@ -1,12 +1,10 @@
 export const siteConfig = {
   name: "Vector UI",
-  url: "", // url
-  ogImage: "", // url/og
+  url: "https://vectorui.vercel.app/", // url
+  ogImage: "https://vectorui.vercel.app/og", // url/og
   description:
-    "Beautifully designed landing page components built with React & Tailwind CSS.",
+    "Vector UI is a sleek, modern library offering stylish components to elevate your web projects with clean design and smooth interactions.",
   links: {
-    twitter: "https://twitter.com/Vaibhav_k__",
-    discord: "", // discord
     github: "https://github.com/vector-ui/vectorui/",
     instagram: "https://www.instagram.com/vaibhavkesarwani__/",
   },
