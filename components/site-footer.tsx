@@ -8,7 +8,7 @@ export function SiteFooter() {
           Brought to you by{" "}
           <a
             href={siteConfig.links.userGithub}
-            title="Twitter"
+            title="User-Github"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
