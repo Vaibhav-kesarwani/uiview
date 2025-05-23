@@ -7,7 +7,7 @@ export function SiteFooter() {
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
           Brought to you by{" "}
           <a
-            href={siteConfig.links.twitter}
+            href={siteConfig.links.userGithub}
             title="Twitter"
             target="_blank"
             rel="noreferrer"
