@@ -20,7 +20,7 @@ const nextConfig = {
       },
       {
         source: "/components",
-        destination: "/docs/components/",
+        destination: "/docs/components/marquee",
         permanent: true,
       },
       {
@@ -30,7 +30,7 @@ const nextConfig = {
       },
       {
         source: "/docs/components",
-        destination: "/docs/components/",
+        destination: "/docs/components/marquee",
         permanent: true,
       },
       {
