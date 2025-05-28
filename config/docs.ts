@@ -44,11 +44,6 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/marquee`,
           items: [],
         },
-        {
-          title: "Tweet Card",
-          href: `/docs/components/tweet-card`,
-          items: [],
-        },
       ],
     }
   ],
