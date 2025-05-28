@@ -10,7 +10,8 @@ export default function Page() {
         Showcase
       </h2>
       <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-        Projects choose Vector UI as the foundation for building their landing pages.
+        Projects choose Vector UI as the foundation for building their landing
+        pages.
       </h3>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {allShowcases.map((showcase, idx) => (
