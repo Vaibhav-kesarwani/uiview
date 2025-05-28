@@ -15,23 +15,6 @@ export const Index: Record<string, any> = {
     component: null,
     meta: undefined,
   },
-  "tweet-card": {
-    name: "tweet-card",
-    description: "A card that displays a tweet with the author's name, handle, and profile picture.",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/vectorui/tweet-card.tsx",
-      type: "registry:ui",
-      target: "components/vectorui/tweet-card.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/vectorui/tweet-card.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
   "marquee": {
     name: "marquee",
     description: "A card that displays a tweet with the author's name, handle, and profile picture.",
@@ -44,57 +27,6 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/vectorui/marquee.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "tweet-card-demo": {
-    name: "tweet-card-demo",
-    description: "Example showing a tweet card with author info.",
-    type: "registry:example",
-    registryDependencies: ["https://vectorui.vercel.app/r/tweet-card"],
-    files: [{
-      path: "registry/example/tweet-card-demo.tsx",
-      type: "registry:example",
-      target: "components/tweet-card-demo.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/tweet-card-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "tweet-card-images": {
-    name: "tweet-card-images",
-    description: "Example showing a tweet card with images.",
-    type: "registry:example",
-    registryDependencies: ["https://vectorui.vercel.app/r/tweet-card"],
-    files: [{
-      path: "registry/example/tweet-card-images.tsx",
-      type: "registry:example",
-      target: "components/tweet-card-images.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/tweet-card-images.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "tweet-card-meta-preview": {
-    name: "tweet-card-meta-preview",
-    description: "Example showing a tweet card with meta preview.",
-    type: "registry:example",
-    registryDependencies: ["https://vectorui.vercel.app/r/tweet-card"],
-    files: [{
-      path: "registry/example/tweet-card-meta-preview.tsx",
-      type: "registry:example",
-      target: "components/tweet-card-meta-preview.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/tweet-card-meta-preview.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
