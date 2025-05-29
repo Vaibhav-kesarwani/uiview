@@ -1,6 +1,6 @@
-<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-  <h1 align="center" style="display: flex; align-items: stretch; gap: 10px; margin: 0;">
-    <img src="./app/icon.png" style="width: 35px; height: 35px;" alt="icon" />
+<div style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+  <h1 align="center" style="display: flex; align-items: center; gap: 10px; margin: 0;">
+    <img src="./app/icon.png" style="width: 30px; height: 30px;" alt="icon" />
     VectorUI
   </h1>
 </div>
@@ -16,7 +16,10 @@
     <a href="https://twitter.com/Vaibhav_k__"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/Vaibhav_k__"></a>
     <a href="https://github.com/Vaibhav-kesarwani/vectorui/network"><img alt="Github Repo forks" src="https://img.shields.io/github/forks/Vaibhav-kesarwani/vectorui"></a>
     <a href="https://github.com/Vaibhav-kesarwani/vectorui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+  
 </div>
+
+<br>
 
 Welcome to **VectorUI**, your ultimate front-end companion for crafting modern, visually appealing, and reusable UI components and website templates — designed to speed up your development workflow and inspire creativity.
 
