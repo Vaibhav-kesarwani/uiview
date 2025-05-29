@@ -127,6 +127,16 @@ VectorUI is built using a modern frontend stack for performance, scalability, an
 
 ---
 
+## 🧑‍💻 How to Contribute
+
+#### Contributions make this project better and help build an amazing open-source community.
+
+#### If you'd like to contribute, please check out our [Contribution Guide](/CONTRIBUTING.md) to get started with setup instructions, guidelines, and best practices.
+
+#### We welcome your ideas, bug fixes, and new features!
+
+---
+
 ## 📄 License
 
 This project is licensed under the **MIT License**.  
