@@ -1,4 +1,11 @@
-# <img src="./app/icon.png" style="width: 35px; vertical-align: middle;" align="center" /> **VectorUI** – Unique UI Components & Templates Library
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+  <img src="./app/icon.png" style="width: 35px; height: 35px;" alt="icon" />
+  <h1 style="margin: 0;">VectorUI</h1>
+</div>
+
+<p align="center"> 
+    Unique UI Components & Templates Library
+</p>
 
 Welcome to **VectorUI**, your ultimate front-end companion for crafting modern, visually appealing, and reusable UI components and website templates — designed to speed up your development workflow and inspire creativity.
 
