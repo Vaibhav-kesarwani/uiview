@@ -5,9 +5,10 @@
   </h1>
 </div>
 
-
 <p align="center"> 
-    Unique UI Components & Templates Library
+    <b>
+        Unique UI Components & Templates Library
+    </b>
 </p>
 
 Welcome to **VectorUI**, your ultimate front-end companion for crafting modern, visually appealing, and reusable UI components and website templates — designed to speed up your development workflow and inspire creativity.
@@ -30,22 +31,22 @@ This library is perfect for developers who want to save time building interfaces
 
 ---
 
-## 🧩 What’s Included  
+## 🧩 What’s Included
 
 VectorUI offers a wide range of reusable components and templates built with modern technologies:
 
-- Buttons, modals, sliders, dropdowns, accordions — 
-built with shadcn/ui + Tailwind
-- Forms and input groups — styled and 
-validation-ready with React + TypeScript
-- Fully responsive navigation bars and footers — 
-optimized for mobile and desktop
-- Full-page templates — including landing pages, 
-portfolios, dashboards, and blogs
-- Theme support — built-in dark/light theming using 
-Tailwind CSS and CSS variables
-- Smooth UI interactions — powered by Framer Motion 
-for animations and transitions
+- Buttons, modals, sliders, dropdowns, accordions —
+  built with shadcn/ui + Tailwind
+- Forms and input groups — styled and
+  validation-ready with React + TypeScript
+- Fully responsive navigation bars and footers —
+  optimized for mobile and desktop
+- Full-page templates — including landing pages,
+  portfolios, dashboards, and blogs
+- Theme support — built-in dark/light theming using
+  Tailwind CSS and CSS variables
+- Smooth UI interactions — powered by Framer Motion
+  for animations and transitions
 
 Each component lives in its own folder with:
 
@@ -66,7 +67,7 @@ Here’s why developers love building with VectorUI:
 ✅ Stay consistent with scalable, Tailwind-powered design patterns  
 ✅ Deliver polished UX/UI without needing a dedicated designer  
 ✅ Learn advanced React, Framer Motion, and shadcn/ui through clean, real-world examples  
-✅ Focus on building features — not reinventing UI from scratch  
+✅ Focus on building features — not reinventing UI from scratch
 
 ---
 
@@ -97,6 +98,7 @@ pnpm install
 ```bash
 pnpm dev
 ```
+
 ---
 
 ## 🌐 Live Preview
@@ -105,15 +107,16 @@ Want to see components in action before using them? Visit the [VectorUI Website]
 
 ---
 
-## 🧰 Tech Stack  
+## 🧰 Tech Stack
+
 VectorUI is built using a modern frontend stack for performance, scalability, and developer experience:
 
-- **Next.js** – Framework for server-side rendering and fast web app performance  
-- **TypeScript** – Strong typing for safer, more maintainable code  
-- **React** – Component-based architecture for flexible UI development  
-- **Tailwind CSS** – Utility-first styling for rapid design iteration  
-- **Framer Motion** – Seamless animations and interaction transitions  
-- **shadcn/ui** – Beautiful, accessible component primitives built on Tailwind  
+- **Next.js** – Framework for server-side rendering and fast web app performance
+- **TypeScript** – Strong typing for safer, more maintainable code
+- **React** – Component-based architecture for flexible UI development
+- **Tailwind CSS** – Utility-first styling for rapid design iteration
+- **Framer Motion** – Seamless animations and interaction transitions
+- **shadcn/ui** – Beautiful, accessible component primitives built on Tailwind
 
 ---
 
@@ -128,7 +131,7 @@ Feel free to use, modify, and share it. See the [LICENSE](LICENSE) file for deta
 
 If you have any suggestions, questions, or feedback, feel free to reach out:
 
-- 📬 **Email**: [vaibhavkesarwani100@gmail.com](mailto:vaibhavkesarwani100@gmail.com)  
+- 📬 **Email**: [vaibhavkesarwani100@gmail.com](mailto:vaibhavkesarwani100@gmail.com)
 - 💼 **GitHub**: [@Vaibhav-kesarwani](https://github.com/Vaibhav-kesarwani)
 - 🔥 **Portfolio**: [vaibhav kesarwani](https://vaibhavkesarwani.vercel.app/)
 
@@ -138,8 +141,8 @@ If you have any suggestions, questions, or feedback, feel free to reach out:
 
 If `VectorUI` helps you build better interfaces:
 
-- ⭐ Star this repo on GitHub 
-- 🍴 Fork it to build your own UI collection 
+- ⭐ Star this repo on GitHub
+- 🍴 Fork it to build your own UI collection
 - 📣 Share it with your developer friends and communities!
 
 ---
