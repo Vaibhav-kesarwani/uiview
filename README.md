@@ -140,6 +140,18 @@ VectorUI is built using a modern frontend stack for performance, scalability, an
 
 ---
 
+## ✨ Contributors
+
+<a href="https://github.com/Vaibhav-kesarwani/vectorui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Vaibhav-kesarwani/vectorui" />
+</a>
+
+## 📊 Stats
+
+![Alt](https://repobeats.axiom.co/api/embed/1716ee975a7ac00fa56f35e06162fc0f4a1293ec.svg "Repobeats analytics image")
+
+---
+
 ## 📄 License
 
 This project is licensed under the **MIT License**.  
