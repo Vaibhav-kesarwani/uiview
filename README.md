@@ -11,6 +11,13 @@
     </b>
 </p>
 
+<div align="center">
+    <a href="https://github.com/Vaibhav-kesarwani/vectorui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Vaibhav-kesarwani/vectorui"></a>
+    <a href="https://twitter.com/Vaibhav_k__"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/Vaibhav_k__"></a>
+    <a href="https://github.com/Vaibhav-kesarwani/vectorui/network"><img alt="Github Repo forks" src="https://img.shields.io/github/forks/Vaibhav-kesarwani/vectorui"></a>
+    <a href="https://github.com/Vaibhav-kesarwani/vectorui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+</div>
+
 Welcome to **VectorUI**, your ultimate front-end companion for crafting modern, visually appealing, and reusable UI components and website templates — designed to speed up your development workflow and inspire creativity.
 
 This library is perfect for developers who want to save time building interfaces while maintaining high design standards. Whether you're prototyping a startup landing page or building a complete portfolio, **VectorUI** offers everything you need in one elegant package.
