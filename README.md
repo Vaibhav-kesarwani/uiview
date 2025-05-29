@@ -94,6 +94,12 @@ pnpm dev
 ```
 ---
 
+## 🌐 Live Preview
+
+Want to see components in action before using them? Visit the [VectorUI Website](https://vectorui.vercel.app/) to explore and copy-paste directly from the preview.
+
+---
+
 ## 📄 License
 
 This project is licensed under the **MIT License**.  
