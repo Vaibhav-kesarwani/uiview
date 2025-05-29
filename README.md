@@ -1,7 +1,10 @@
 <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-  <img src="./app/icon.png" style="width: 35px; height: 35px;" alt="icon" />
-  <h1 style="margin: 0;">VectorUI</h1>
+  <h1 align="center" style="display: flex; align-items: stretch; gap: 10px; margin: 0;">
+    <img src="./app/icon.png" style="width: 35px; height: 35px;" alt="icon" />
+    VectorUI
+  </h1>
 </div>
+
 
 <p align="center"> 
     Unique UI Components & Templates Library
