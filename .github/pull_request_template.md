@@ -7,6 +7,7 @@
 <!-- Provide a brief description of the changes your pull request makes. Explain the problem it solves or the feature it adds to the project. Include any relevant issue numbers. -->
 
 ## Type of Change
+- [ ] New UI components
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
