@@ -24,22 +24,17 @@ This library is perfect for developers who want to save time building interfaces
 
 VectorUI offers a wide range of reusable components and templates built with modern technologies:
 
-- 🔘 Buttons, modals, sliders, dropdowns, accordions — 
+- Buttons, modals, sliders, dropdowns, accordions — 
 built with shadcn/ui + Tailwind
-
-- 📃 Forms and input groups — styled and 
+- Forms and input groups — styled and 
 validation-ready with React + TypeScript
-
-- 📱 Fully responsive navigation bars and footers — 
+- Fully responsive navigation bars and footers — 
 optimized for mobile and desktop
-
-- 🧭 Full-page templates — including landing pages, 
+- Full-page templates — including landing pages, 
 portfolios, dashboards, and blogs
-
-- 🌈 Theme support — built-in dark/light theming using 
+- Theme support — built-in dark/light theming using 
 Tailwind CSS and CSS variables
-
-- 🌀 Smooth UI interactions — powered by Framer Motion 
+- Smooth UI interactions — powered by Framer Motion 
 for animations and transitions
 
 Each component lives in its own folder with:
@@ -97,6 +92,18 @@ pnpm dev
 ## 🌐 Live Preview
 
 Want to see components in action before using them? Visit the [VectorUI Website](https://vectorui.vercel.app/) to explore and copy-paste directly from the preview.
+
+---
+
+## 🧰 Tech Stack  
+VectorUI is built using a modern frontend stack for performance, scalability, and developer experience:
+
+- **Next.js** – Framework for server-side rendering and fast web app performance  
+- **TypeScript** – Strong typing for safer, more maintainable code  
+- **React** – Component-based architecture for flexible UI development  
+- **Tailwind CSS** – Utility-first styling for rapid design iteration  
+- **Framer Motion** – Seamless animations and interaction transitions  
+- **shadcn/ui** – Beautiful, accessible component primitives built on Tailwind  
 
 ---
 
