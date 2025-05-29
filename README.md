@@ -65,7 +65,34 @@ Here’s why developers love building with VectorUI:
 
 ---
 
+## 🛠️ Getting Started
 
+Follow these simple steps to locally use the VectorUI:
+
+#### Step 1: Clone the repository
+
+```bash
+git clone https://github.com/Vaibhav-kesarwani/vectorui.git
+```
+
+#### Step 2: Navigate into the project
+
+```bash
+cd vectorui
+```
+
+#### Step 3: Install the required packages
+
+```bash
+pnpm install
+```
+
+#### Step 4: Run the project locally
+
+```bash
+pnpm dev
+```
+---
 
 ## 📄 License
 
