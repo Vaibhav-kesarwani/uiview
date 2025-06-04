@@ -37,6 +37,11 @@ export const metadata: Metadata = {
     images: ["https://uiview.vercel.app/og.png"],
     creator: "@Vaibhav_kesarwani",
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
