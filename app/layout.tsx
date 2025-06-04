@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     creator: "@Vaibhav_kesarwani",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png",
   },
 };
 
