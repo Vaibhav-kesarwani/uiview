@@ -15,27 +15,33 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Uiview",
-  description: "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
+  description:
+    "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
   openGraph: {
     title: "Uiview",
-    description: "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
+    description:
+      "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
     url: "https://uiview.vercel.app",
     siteName: "Uiview",
-    images: [
-      {
-        url: "https://uiview.vercel.app/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Uiview",
-      },
-    ],
     locale: "en_US",
     type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   twitter: {
     card: "summary_large_image",
     title: "Uiview",
-    description: "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
+    description:
+      "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
     images: ["https://uiview.vercel.app/og.png"],
     creator: "@Vaibhav_kesarwani",
   },
