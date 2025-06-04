@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { fontMono, fontSans } from "@/lib/font";
 import { cn } from "@/lib/utils";
+
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Uiview",
@@ -45,6 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head />
       <body
         className={cn(
           "relative flex w-full flex-col justify-center overflow-x-hidden scroll-smooth bg-background font-sans antialiased",
