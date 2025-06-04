@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import { Navbar } from "./navbar";
 import NavbarButtons from "./navbar-buttons";
 import Logo from "./logo";
