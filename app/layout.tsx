@@ -6,11 +6,11 @@ import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Uiview",
+  title: "Uiview | Modern UI Component Library",
   description:
     "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
   openGraph: {
-    title: "Uiview",
+    title: "Uiview | Modern UI Component Library",
     description:
       "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
     url: "https://uiview.vercel.app",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Uiview",
+    title: "Uiview | Modern UI Component Library",
     description:
       "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
     images: ["https://uiview.vercel.app/og.png"],
