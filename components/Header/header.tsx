@@ -1,13 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { Navbar } from "./navbar";
 import Link from "next/link";
 import MobileNavbar from "./mobile-navbar";
+import { Navbar } from "./navbar";
 
 export function Header() {
   return (
-    <header className="mt-4 mb-8 w-full mx-auto px-4 md:px-8 lg:px-12">
+    <header className="mt-4 mb-8 w-full mx-auto px-4 md:px-8 lg:px-12 z-9999">
       <div className="flex flex-wrap items-center justify-between mb-4 gap-4">
         {/* Logo & Version */}
         <div className="flex items-center gap-2 flex-shrink-0">
@@ -37,11 +37,9 @@ export function Header() {
         </div>
 
         {/* Navbar */}
-        
+
         {/* Desktop Navbar (hidden on small screens) */}
-        <div className="hidden lg:flex">
-          <Navbar />
-        </div>
+        <Navbar />
 
         {/* Mobile Navbar toggle (visible on small screens) */}
         <MobileNavbar />
