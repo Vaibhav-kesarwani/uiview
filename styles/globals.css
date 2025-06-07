@@ -119,4 +119,9 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .dark ::selection {
+    background-color: #fdf5a6; /* brighter background for dark mode */
+    color: #000;
+  }
 }
