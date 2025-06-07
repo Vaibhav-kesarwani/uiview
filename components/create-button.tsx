@@ -1,26 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const CreateButton = () => {
+const starPath = "M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z";
+
+const CreateButton: React.FC = () => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
   return (
     <StyledWrapper>
       <button className="button" type="button">
         <span className="fold" />
-        <div className="points_wrapper">
-          <i className="point" />
-          <i className="point" />
-          <i className="point" />
-          <i className="point" />
-          <i className="point" />
-          <i className="point" />
-          <i className="point" />
-          <i className="point" />
-          <i className="point" />
-          <i className="point" />
+        <div className="points_wrapper" style={{ visibility: loaded ? 'visible' : 'hidden' }}>
+          {Array.from({ length: 15 }).map((_, i) => (
+            <svg key={i} className="point" viewBox="0 0 24 24" fill="currentColor">
+              <path d={starPath} />
+            </svg>
+          ))}
         </div>
         <span className="inner">
           <svg
-            strokeWidth="2.5"
+            strokeWidth={2.5}
             strokeLinejoin="round"
             strokeLinecap="round"
             xmlns="http://www.w3.org/2000/svg"
@@ -50,17 +53,13 @@ const StyledWrapper = styled.div`
     justify-content: center;
     overflow: hidden;
     transition: all 0.25s ease;
-    background: radial-gradient(
-        65.28% 65.28% at 50% 100%,
-        rgba(223, 113, 255, 0.8) 0%,
-        rgba(223, 113, 255, 0) 100%
-      ),
-      linear-gradient(0deg, #7a5af8, #7a5af8);
+    background: linear-gradient(90deg, #b88746 10%, #fdf5a6 100%);
     border-radius: var(--round);
     border: none;
     outline: none;
     padding: 9px 12px;
   }
+
   .button::before,
   .button::after {
     content: "";
@@ -70,23 +69,21 @@ const StyledWrapper = styled.div`
     border-radius: calc(var(--round) - var(--space));
     z-index: 0;
   }
+
   .button::before {
     --space: 1px;
     background: linear-gradient(
-      177.95deg,
+      180deg,
       rgba(255, 255, 255, 0.19) 0%,
       rgba(255, 255, 255, 0) 100%
     );
   }
+
   .button::after {
     --space: 2px;
-    background: radial-gradient(
-        65.28% 65.28% at 50% 100%,
-        rgba(223, 113, 255, 0.8) 0%,
-        rgba(223, 113, 255, 0) 100%
-      ),
-      linear-gradient(0deg, #7a5af8, #7a5af8);
+    background: linear-gradient(69deg, #b88746 60%, #fdf5a6 150%);
   }
+
   .button:active {
     transform: scale(0.95);
   }
@@ -105,11 +102,12 @@ const StyledWrapper = styled.div`
     position: absolute;
     animation: floating-points infinite ease-in-out;
     pointer-events: none;
-    width: 2px;
-    height: 2px;
-    background-color: #fff;
-    border-radius: 9999px;
+    width: 12px;
+    height: 12px;
+    fill: #e5e4e2;
+    opacity: 0.8;
   }
+
   @keyframes floating-points {
     0% {
       transform: translateY(0);
@@ -181,9 +179,44 @@ const StyledWrapper = styled.div`
     animation-delay: 0.2s;
   }
 
+  .points_wrapper .point:nth-child(11) {
+    left: 75%;
+    opacity: 1;
+    animation-duration: 2.5s;
+    animation-delay: 0.3s;
+  }
+
+  .points_wrapper .point:nth-child(12) {
+    left: 85%;
+    opacity: 0.7;
+    animation-duration: 2.5s;
+    animation-delay: 0.4s;
+  }
+
+  .points_wrapper .point:nth-child(13) {
+    left: 90%;
+    opacity: 0.8;
+    animation-duration: 2.5s;
+    animation-delay: 0.5s;
+  }
+
+  .points_wrapper .point:nth-child(14) {
+    left: 35%;
+    opacity: 0.6;
+    animation-duration: 2.5s;
+    animation-delay: 0.6s;
+  }
+
+  .points_wrapper .point:nth-child(15) {
+    left: 20%;
+    opacity: 1;
+    animation-duration: 2.5s;
+    animation-delay: 0.7s;
+  }
+
   .inner {
-    z-index: 2;
-    gap: 6px;
+    z-index: 10;
+    gap: 5px;
     position: relative;
     width: 100%;
     color: white;
@@ -193,22 +226,24 @@ const StyledWrapper = styled.div`
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.1s ease-in-out;
   }
 
   .inner svg.icon {
     width: 18px;
     height: 18px;
-    transition: fill 0.1s linear;
+    transition: fill 0.1s ease-in-out;
   }
 
   .button:focus svg.icon {
     fill: white;
   }
+
   .button:hover svg.icon {
     fill: transparent;
     animation: dasharray 1s linear forwards, filled 0.1s linear forwards 0.95s;
   }
+
   @keyframes dasharray {
     from {
       stroke-dasharray: 0 0 0 0;
@@ -217,6 +252,7 @@ const StyledWrapper = styled.div`
       stroke-dasharray: 68 68 0 0;
     }
   }
+
   @keyframes filled {
     to {
       fill: white;
