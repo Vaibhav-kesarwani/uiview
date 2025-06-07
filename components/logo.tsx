@@ -8,7 +8,7 @@ const Logo = () => {
         className="relative bg-clip-text text-transparent"
         style={{
           backgroundImage:
-            "linear-gradient(to right, #B88746 10%, #FDF5A6 110%)",
+            "linear-gradient(to right, #B88746 10%, #FDF5A6 150%)",
         }}
       >
         UI
@@ -16,7 +16,7 @@ const Logo = () => {
           aria-hidden="true"
           className="absolute left-0 bottom-0 h-[4px] w-full rounded-full"
           style={{
-            background: "linear-gradient(to right, #B88746 10%, #FDF5A6 110%)",
+            background: "linear-gradient(to right, #B88746 10%, #FDF5A6 150%)",
           }}
         />
       </span>
