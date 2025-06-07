@@ -4,6 +4,7 @@ import * as React from "react";
 import { Navbar } from "./navbar";
 import NavbarButtons from "./navbar-buttons";
 import Logo from "./logo";
+import SearchBar from "./search-bar";
 
 export function Header() {
   return (
@@ -11,6 +12,7 @@ export function Header() {
       <div className="mb-4 flex w-full items-center justify-between">
         <Logo />
         <Navbar />
+        <SearchBar />
         <NavbarButtons />
       </div>
     </header>
