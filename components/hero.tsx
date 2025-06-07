@@ -1,6 +1,8 @@
 import { RocketIcon } from "lucide-react";
 import React from "react";
 import { AnimatedAvatar } from "./animated-avatar";
+import { AuroraText } from "./ui/aurora-text";
+import { SparklesText } from "./ui/sparkle-text";
 
 const Hero = () => (
   <div className="flex flex-col items-center mt-30 h-screen px-4 text-center">
@@ -15,7 +17,7 @@ const Hero = () => (
       <AnimatedAvatar />
     </div>
     <h1 className="text-5xl sm:text-7xl lg:text-7xl font-bold max-w-5xl leading-none text-gray-200">
-      The Ultimate Library of Open-Source UI
+      The <AuroraText>Ultimate</AuroraText> Library of <SparklesText>Open-Source UI</SparklesText>
     </h1>
   </div>
 );
