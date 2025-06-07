@@ -3,8 +3,7 @@
 import * as React from "react";
 import { Navbar } from "./navbar";
 import Link from "next/link";
-import SearchBar from "./search-bar";
-import CreateButton from "./create-button";
+import MobileNavbar from "./mobile-navbar";
 
 export function Header() {
   return (
@@ -32,19 +31,20 @@ export function Header() {
             </span>
             <span className="ml-1 text-2xl text-gray-300">view</span>
           </Link>
-          <span className="text-sm text-muted-foreground mt-2 -ml-1">v1.0.0</span>
+          <span className="text-sm text-muted-foreground mt-2 -ml-1">
+            v1.0.0
+          </span>
         </div>
 
         {/* Navbar */}
-        <Navbar />
-
-        {/* Search & Create */}
-        <div className="flex items-center gap-5 flex-shrink-0">
-          <SearchBar />
-          <Link href="/login">
-            <CreateButton />
-          </Link>
+        
+        {/* Desktop Navbar (hidden on small screens) */}
+        <div className="hidden lg:flex">
+          <Navbar />
         </div>
+
+        {/* Mobile Navbar toggle (visible on small screens) */}
+        <MobileNavbar />
       </div>
     </header>
   );
