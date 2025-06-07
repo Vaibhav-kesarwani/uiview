@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const starPath = "M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z";
+const bubblePath = `
+  M 12 2
+  C 17.5228 2 22 6.47715 22 12
+  C 22 17.5228 17.5228 22 12 22
+  C 6.47715 22 2 17.5228 2 12
+  C 2 6.47715 6.47715 2 12 2
+  Z
+`;
 
 const CreateButton: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
@@ -14,10 +21,18 @@ const CreateButton: React.FC = () => {
     <StyledWrapper>
       <button className="button" type="button">
         <span className="fold" />
-        <div className="points_wrapper" style={{ visibility: loaded ? 'visible' : 'hidden' }}>
+        <div
+          className="points_wrapper"
+          style={{ visibility: loaded ? "visible" : "hidden" }}
+        >
           {Array.from({ length: 15 }).map((_, i) => (
-            <svg key={i} className="point" viewBox="0 0 24 24" fill="currentColor">
-              <path d={starPath} />
+            <svg
+              key={i}
+              className="point"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d={bubblePath} />
             </svg>
           ))}
         </div>
@@ -98,14 +113,14 @@ const StyledWrapper = styled.div`
   }
 
   .points_wrapper .point {
-    bottom: -10px;
+    bottom: -5px;
     position: absolute;
     animation: floating-points infinite ease-in-out;
     pointer-events: none;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     fill: #e5e4e2;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   @keyframes floating-points {
