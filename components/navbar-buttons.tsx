@@ -1,24 +1,15 @@
 import Link from "next/link";
 import React from "react";
-import { Button } from "./ui/button";
-import { PlusIcon, RocketIcon } from "lucide-react";
+import CreateButton from "./create-button";
+import SearchBar from "./search-bar";
 
 const NavbarButtons = () => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-5">
+      <SearchBar />
       <Link href={"/login"}>
-        <Button className="bg-blue-600 p-5 hidden md:inline-flex cursor-pointer hover:bg-blue-500 text-white">
-          <PlusIcon className="h-4 w-4" />
-          <p>Create</p>
-        </Button>
+        <CreateButton />
       </Link>
-      <Button
-        variant="outline"
-        className="bg-muted-foreground p-5 hidden md:inline-flex"
-      >
-        <RocketIcon className="h-4 w-4" />
-        <Link href="/signup">Join the Community</Link>
-      </Button>
     </div>
   );
 };
