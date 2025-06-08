@@ -53,7 +53,7 @@ export default function CreatePage() {
             showTabs
             showLineNumbers
           />
-          <SandpackPreview style={{ height: "100%" }} />
+          <SandpackPreview suppressHydrationWarning showNavigator style={{ height: "100%" }} />
         </SandpackLayout>
       </SandpackProvider>
     </main>
