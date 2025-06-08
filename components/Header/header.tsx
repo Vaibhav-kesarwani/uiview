@@ -10,7 +10,7 @@ export function Header() {
     <header className="mt-4 mb-8 w-full mx-auto px-4 md:px-8 lg:px-12 z-9999">
       <div className="flex flex-wrap items-center justify-between mb-4 gap-4">
         {/* Logo & Version */}
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="items-center gap-2 flex-shrink-0 hidden lg:flex">
           <Link href="/" className="text-2xl font-bold relative inline-block">
             <span
               className="relative bg-clip-text text-transparent"
