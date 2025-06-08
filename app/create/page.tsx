@@ -1,15 +1,22 @@
 "use client";
 
-import { Sandpack } from "@codesandbox/sandpack-react";
+import {
+  SandpackCodeEditor,
+  SandpackFileExplorer,
+  SandpackLayout,
+  SandpackPreview,
+  SandpackProvider,
+} from "@codesandbox/sandpack-react";
+import { autocompletion } from "@codemirror/autocomplete";
 import { amethyst } from "@codesandbox/sandpack-themes";
+import files from "@/content/create_data";
 
 export default function CreatePage() {
   return (
-    <main className="min-h-screen p-6 bg-gray-900 text-gray-100">
+    <main className="min-h-screen p-6 bg-[#0A0A0A] text-gray-100">
       <h1 className="text-3xl font-bold mb-4">Component Editor</h1>
-      <Sandpack
+      <SandpackProvider
         theme={amethyst}
-        template="react-ts"
         customSetup={{
           entry: "/index.tsx",
           dependencies: {
@@ -17,66 +24,38 @@ export default function CreatePage() {
             "react-dom": "18.2.0",
           },
         }}
-        files={{
-          "/Component.tsx": {
-            code: `export default function Component() {
-  return (
-    <div className="bg-blue-600 text-white text-lg p-4 rounded shadow">
-      Hello from Tailwind Component!
-    </div>
-  );
-}`,
-            active: true,
-          },
-          "/index.tsx": {
-            code: `import * as React from "react";
-import * as ReactDOM from "react-dom/client";
-import Component from "./Component";
-import "./index.css";
-
-const root = ReactDOM.createRoot(document.getElementById("root")!);
-root.render(
-  <React.StrictMode>
-    <div className="p-6">
-      <h2 className="text-xl font-bold mb-4">Live Preview</h2>
-      <Component />
-    </div>
-  </React.StrictMode>
-);`,
-          },
-          "/index.css": {
-            code: `@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-html, body, #root {
-  background-color: #1a202c; /* Tailwind gray-900 */
-  color: #f7fafc; /* Tailwind gray-100 */
-  min-height: 100vh;
-}
-`,
-          },
-          "/index.html": {
-            code: `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Sandpack</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-900 text-gray-100">
-    <div id="root"></div>
-  </body>
-</html>`,
-          },
-        }}
+        files={files}
         options={{
-          showLineNumbers: true,
-          showTabs: true,
-          wrapContent: true,
-          editorHeight: 500,
+          externalResources: ["https://cdn.tailwindcss.com"],
         }}
-      />
+      >
+        <SandpackLayout
+          style={{
+            height: "600px",
+            display: "flex",
+            flexDirection: "row",
+          }}
+        >
+          <SandpackFileExplorer
+            about="key"
+            initialCollapsedFolder={["/public/"]}
+            style={{ height: "100%", fontSize: "15px" }}
+          />
+          <SandpackCodeEditor
+            extensions={[autocompletion()]}
+            style={{
+              fontSize: "15px",
+              height: "100%",
+            }}
+            showInlineErrors
+            wrapContent
+            closableTabs
+            showTabs
+            showLineNumbers
+          />
+          <SandpackPreview suppressHydrationWarning showNavigator style={{ height: "100%" }} />
+        </SandpackLayout>
+      </SandpackProvider>
     </main>
   );
 }

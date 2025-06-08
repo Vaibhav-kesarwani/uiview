@@ -4,6 +4,8 @@ import { fontMono, fontSans } from "@/lib/font";
 import { cn } from "@/lib/utils";
 
 import "@/styles/globals.css";
+import { Header } from "@/components/Header/header";
+import Footer from "@/components/Footer/footer";
 
 export const metadata: Metadata = {
   title: "Uiview | Modern UI Component Library",
@@ -63,7 +65,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
