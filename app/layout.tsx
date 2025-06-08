@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/Theme-Provider/theme-provider";
 import { fontMono, fontSans } from "@/lib/font";
 import { cn } from "@/lib/utils";
 
