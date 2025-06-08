@@ -55,12 +55,12 @@ const navSections = [
 
 export function Navbar() {
   return (
-    <div className="items-center justify-between gap-120 hidden lg:flex">
+    <div className="items-center justify-between gap-110 hidden lg:flex">
       {/* Centered Navigation */}
       <NavigationMenu viewport={false}>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
             <NavigationMenuContent className="dark:bg-[#171717] rounded-xl p-5 shadow-lg">
               <ul className="grid gap-2 md:w-[600px] lg:w-[700px] lg:grid-cols-[1fr_1fr_.95fr]">
                 {navSections.map((section, index) => (
