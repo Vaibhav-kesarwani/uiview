@@ -55,7 +55,7 @@ const navSections = [
 
 export function Navbar() {
   return (
-    <div className="items-center justify-between gap-120 hidden md:flex">
+    <div className="items-center justify-between gap-120 hidden lg:flex">
       {/* Centered Navigation */}
       <NavigationMenu viewport={false}>
         <NavigationMenuList>
