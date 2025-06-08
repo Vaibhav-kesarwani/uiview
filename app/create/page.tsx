@@ -7,7 +7,9 @@ import {
   SandpackPreview,
   SandpackProvider,
 } from "@codesandbox/sandpack-react";
+import { autocompletion } from "@codemirror/autocomplete";
 import { amethyst } from "@codesandbox/sandpack-themes";
+import files from "@/content/create_data";
 
 export default function CreatePage() {
   return (
@@ -15,13 +17,16 @@ export default function CreatePage() {
       <h1 className="text-3xl font-bold mb-4">Component Editor</h1>
       <SandpackProvider
         theme={amethyst}
-        template="react-ts"
         customSetup={{
           entry: "/index.tsx",
           dependencies: {
             react: "18.2.0",
             "react-dom": "18.2.0",
           },
+        }}
+        files={files}
+        options={{
+          externalResources: ["https://cdn.tailwindcss.com"],
         }}
       >
         <SandpackLayout
@@ -31,8 +36,13 @@ export default function CreatePage() {
             flexDirection: "row",
           }}
         >
-          <SandpackFileExplorer style={{ height: "100%", fontSize: "15px" }} />
+          <SandpackFileExplorer
+            about="key"
+            initialCollapsedFolder={["/public/"]}
+            style={{ height: "100%", fontSize: "15px" }}
+          />
           <SandpackCodeEditor
+            extensions={[autocompletion()]}
             style={{
               fontSize: "15px",
               height: "100%",
@@ -43,7 +53,7 @@ export default function CreatePage() {
             showTabs
             showLineNumbers
           />
-          <SandpackPreview style={{ height: "100%" }} />
+          <SandpackPreview suppressHydrationWarning showNavigator style={{ height: "100%" }} />
         </SandpackLayout>
       </SandpackProvider>
     </main>
