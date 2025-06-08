@@ -47,7 +47,14 @@ root.render(
           "/index.css": {
             code: `@tailwind base;
 @tailwind components;
-@tailwind utilities;`,
+@tailwind utilities;
+
+html, body, #root {
+  background-color: #1a202c; /* Tailwind gray-900 */
+  color: #f7fafc; /* Tailwind gray-100 */
+  min-height: 100vh;
+}
+`,
           },
           "/index.html": {
             code: `<!DOCTYPE html>
