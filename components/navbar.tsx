@@ -17,6 +17,7 @@ import AuthModal from "./ui/auth-modal";
 import { useState } from "react";
 import { navSections } from "@/content/config";
 import { iconLibrary } from "@/icons/icon";
+import NavCard from "./nav-card";
 
 export function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,8 +29,8 @@ export function Navbar() {
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-            <NavigationMenuContent className="dark:bg-[#171717] rounded-xl p-3 shadow-lg">
-              <ul className="grid grid-cols-3 gap-3 md:w-[600px] lg:w-[700px]">
+            <NavigationMenuContent className="felx dark:bg-[#171717] rounded-xl p-3 shadow-lg">
+              <ul className="grid grid-cols-[1.5fr_1.5fr_1fr] gap-3 lg:w-[800px]">
                 {/* Nav items container spanning first 2 columns */}
                 <li className="col-span-2">
                   <ul className="grid grid-cols-2 gap-3">
@@ -59,21 +60,7 @@ export function Navbar() {
                 </li>
 
                 {/* Highlight box spanning full height in 3rd column */}
-                <li className="row-span-full rounded-lg bg-gradient-to-b from-muted/50 to-muted text-white hover:shadow-lg transition-shadow">
-                  <NavigationMenuLink asChild>
-                    <Link
-                      href="/"
-                      className="flex h-full w-full flex-col justify-end no-underline select-none focus:shadow-md"
-                    >
-                      <div className="mt-4 mb-2 text-lg font-semibold">
-                        shadcn/ui
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components built with Tailwind CSS.
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
+                <NavCard />
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
