@@ -2,8 +2,8 @@
 "use client";
 
 import React, { useEffect, useState, useRef, useCallback } from "react";
+import Image from "next/image";
 
-// Marquee component for horizontal scrolling user profiles
 type User = {
   id: string;
   name: string;
@@ -22,115 +22,113 @@ export default function Marquee({
   initialDirection = "forward",
 }: MarqueeProps) {
   const marqueeRef = useRef<HTMLDivElement>(null);
-  // Ref to hold the current animation frame ID for pausing/resuming
   const animationFrameId = useRef<number | null>(null);
-  // Ref to hold the last timestamp for consistent speed across frames
   const lastTimestamp = useRef<DOMHighResTimeStamp>(0);
-  // State for the current translation position (in pixels)
-  const [position, setPosition] = useState(0);
-  // State for the current direction (will be set from prop)
+  // Use useRef for position to avoid frequent re-renders during animation
+  const positionRef = useRef(0);
   const [direction, setDirection] = useState<"forward" | "backward">(
     initialDirection
   );
+  // Store the calculated single set width to avoid re-calculating on every frame
+  const singleSetWidthRef = useRef(0);
 
-  // Define scroll speed (pixels per second)
-  // Adjust this value to control the speed. Higher = faster.
-  const pixelsPerSecond = 70; // A good balance for speed and smoothness.
-  // Start with this, then adjust as needed (e.g., 50 to 200)
+  const pixelsPerSecond = 30; // Already reduced, good for mobile
 
-  // Calculate the total width of a single set of user cards
-  const calculateSingleSetWidth = useCallback(() => {
-    if (marqueeRef.current && users.length > 0) {
-      const firstItem = marqueeRef.current.children[0] as HTMLElement;
-      // Use clientWidth/offsetWidth for actual rendered width
-      const itemWidth = firstItem
-        ? firstItem.offsetWidth +
-          parseInt(getComputedStyle(firstItem).marginLeft) +
-          parseInt(getComputedStyle(firstItem).marginRight)
-        : 280; // Account for margins
-      return users.length * itemWidth;
-    }
-    return 0; // Return 0 if no users or ref not ready
-  }, [users]);
+  // Removed calculateSingleSetWidth as a useCallback, it will be called once in useEffect
 
-  // Animation loop function
   const animateScroll = useCallback(
     (timestamp: DOMHighResTimeStamp) => {
       if (!lastTimestamp.current) {
         lastTimestamp.current = timestamp;
       }
 
-      const deltaTime = (timestamp - lastTimestamp.current) / 1000; // time in seconds
+      const deltaTime = (timestamp - lastTimestamp.current) / 1000;
       const distanceToMove = pixelsPerSecond * deltaTime;
+      const currentSingleSetWidth = singleSetWidthRef.current;
 
-      setPosition((prevPosition) => {
-        let newPosition = prevPosition;
-        const singleSetWidth = calculateSingleSetWidth();
+      let newPosition = positionRef.current;
 
-        if (direction === "forward") {
-          newPosition -= distanceToMove;
-          // If we've scrolled past the first full set of users (which is the effective loop point)
-          if (newPosition <= -singleSetWidth) {
-            // Reset position to simulate continuous loop
-            // Add singleSetWidth back to bring it to the start of the "next" set
-            newPosition += singleSetWidth;
-          }
-        } else {
-          // backward
-          newPosition += distanceToMove;
-          // If we've scrolled past the "start" of the first duplicate set (effectively the loop point)
-          if (newPosition >= 0) {
-            // Reset position to simulate continuous loop
-            // Subtract singleSetWidth to bring it to the end of the "previous" set
-            newPosition -= singleSetWidth;
-          }
+      if (direction === "forward") {
+        newPosition -= distanceToMove;
+        if (
+          newPosition <= -currentSingleSetWidth &&
+          currentSingleSetWidth > 0
+        ) {
+          newPosition += currentSingleSetWidth;
         }
-        return newPosition;
-      });
+      } else {
+        newPosition += distanceToMove;
+        if (newPosition >= 0 && currentSingleSetWidth > 0) {
+          newPosition -= currentSingleSetWidth;
+        }
+      }
+
+      positionRef.current = newPosition; // Update the ref
+
+      // Directly update the DOM element's style
+      if (marqueeRef.current) {
+        marqueeRef.current.style.transform = `translateX(${newPosition}px)`;
+      }
 
       lastTimestamp.current = timestamp;
       animationFrameId.current = requestAnimationFrame(animateScroll);
     },
-    [direction, pixelsPerSecond, calculateSingleSetWidth]
+    [direction, pixelsPerSecond] // Dependencies reduced
   );
 
-  // Start/Stop animation effect
   useEffect(() => {
-    // Clear any existing animation frame to prevent multiple loops
     if (animationFrameId.current) {
       cancelAnimationFrame(animationFrameId.current);
     }
-    // Start animation only if there are users
-    if (users.length > 0) {
-      // For backward direction, initialize position to start at the "end" of the duplicated content
-      // so it scrolls into view naturally.
+
+    if (users.length > 0 && marqueeRef.current) {
+      // Calculate singleSetWidth once when users or direction changes
+      const firstItem = marqueeRef.current.children[0] as HTMLElement;
+      if (firstItem) {
+        const itemWidth =
+          firstItem.offsetWidth +
+          parseInt(getComputedStyle(firstItem).marginLeft) +
+          parseInt(getComputedStyle(firstItem).marginRight);
+        singleSetWidthRef.current = users.length * itemWidth;
+      } else {
+        singleSetWidthRef.current = 0; // Fallback if no items
+      }
+
       const initialOffset =
-        initialDirection === "backward" ? -calculateSingleSetWidth() : 0;
-      setPosition(initialOffset);
-      lastTimestamp.current = 0; // Reset timestamp to ensure smooth start
+        initialDirection === "backward" ? -singleSetWidthRef.current : 0;
+      positionRef.current = initialOffset; // Set initial position in ref
+      // Apply initial transform to DOM
+      if (marqueeRef.current) {
+        marqueeRef.current.style.transform = `translateX(${initialOffset}px)`;
+      }
+
+      lastTimestamp.current = 0;
       animationFrameId.current = requestAnimationFrame(animateScroll);
+    } else {
+      // If no users, ensure animation is stopped and reset
+      if (animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+        animationFrameId.current = null;
+      }
+      positionRef.current = 0;
+      if (marqueeRef.current) {
+        marqueeRef.current.style.transform = `translateX(0px)`;
+      }
+      singleSetWidthRef.current = 0;
     }
 
-    // Cleanup: stop animation when component unmounts or dependencies change
     return () => {
       if (animationFrameId.current) {
         cancelAnimationFrame(animationFrameId.current);
       }
     };
-  }, [
-    users,
-    direction,
-    animateScroll,
-    calculateSingleSetWidth,
-    initialDirection,
-  ]); // Re-run if users or direction changes
+    // Removed calculateSingleSetWidth from dependencies as it's now computed inside
+  }, [users, direction, animateScroll, initialDirection]);
 
-  // Update direction if prop changes (optional, but good for dynamic control)
   useEffect(() => {
     setDirection(initialDirection);
   }, [initialDirection]);
 
-  // Handle hover for pause/play
   const handleMouseEnter = () => {
     if (animationFrameId.current) {
       cancelAnimationFrame(animationFrameId.current);
@@ -140,7 +138,7 @@ export default function Marquee({
 
   const handleMouseLeave = () => {
     if (!animationFrameId.current && users.length > 0) {
-      lastTimestamp.current = 0; // Reset timestamp for smooth resume
+      lastTimestamp.current = 0;
       animationFrameId.current = requestAnimationFrame(animateScroll);
     }
   };
@@ -151,57 +149,110 @@ export default function Marquee({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Marquee content container */}
-      {/* We no longer need the CSS animation classes here. */}
       <div
         id="marquee-content"
         ref={marqueeRef}
-        className="flex whitespace-nowrap"
-        // Apply transform directly via style
-        style={{ transform: `translateX(${position}px)` }}
+        className="flex whitespace-nowrap will-change-transform" // Add will-change-transform for browser optimization hints
+        // Remove style={{ transform: `translateX(${position}px)` }}
+        // The transform is now applied directly in animateScroll
       >
-        {/* Duplicate content TWICE to ensure seamless loop with JS.
-            When the first set moves out, the second takes its place,
-            and we reset the position behind the scenes. */}
-        {users.length > 0 &&
-          [...users, ...users].map((user, index) => (
-            <div
-              key={`${user.id}-${index}`}
-              className="flex-shrink-0 w-64 md:w-72 lg:w-80 p-3 mx-2 bg-gray-800 rounded-xl shadow-md border border-gray-700
-                       transform transition-transform duration-300 hover:scale-105 hover:bg-gray-700 cursor-pointer"
-            >
-              <div className="flex items-center space-x-3">
-                <img
-                  src={
-                    user.avatar ||
-                    `https://placehold.co/40x40/4b5563/ffffff?text=${user.name.charAt(
-                      0
-                    )}`
-                  }
-                  alt={user.name}
-                  className="w-10 h-10 rounded-full border-2 border-purple-500 object-cover"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.onerror = null;
-                    target.src =
-                      "https://placehold.co/40x40/4b5563/ffffff?text=?";
-                  }}
-                />
-                <div className="flex flex-col">
-                  <span className="font-semibold text-lg text-blue-300 truncate max-w-[150px]">
-                    {user.name}
-                  </span>
-                  <div className="flex text-sm text-gray-400 space-x-2">
-                    <span>{user.posts} posts</span>
-                    <span className="text-yellow-300">
-                      &#9733; {user.value.toLocaleString()}
-                    </span>{" "}
+        {users.length > 0 ? (
+          // Render two sets of users for continuous looping
+          // Using a fragment to avoid an extra div, though not strictly necessary for perf
+          <>
+            {users.map((user, index) => (
+              <div
+                key={`initial-${user.id}-${index}`} // Unique key for the first set
+                className="flex-shrink-0 w-60 sm:w-64 md:w-72 lg:w-80 h-20 md:h-20 lg:h-22 p-3 mx-2 bg-[#111111] rounded-xl shadow-md border-2 border-[#1E1E1E]
+                         transform transition-transform duration-300 cursor-pointer"
+              >
+                <div className="flex items-center space-x-3">
+                  <img
+                    src={
+                      user.avatar ||
+                      `https://placehold.co/40x40/4b5563/ffffff?text=${user.name.charAt(
+                        0
+                      )}`
+                    }
+                    alt={user.name}
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border-2 object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null;
+                      target.src =
+                        "https://placehold.co/40x40/4b5563/ffffff?text=?";
+                    }}
+                  />
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-base md:text-lg text-white truncate max-w-[150px] sm:max-w-[180px] md:max-w-[200px]">
+                      {user.name}
+                    </span>
+                    <div className="flex space-x-2 items-center justify-between">
+                      <span className="text-gray-500 font-semibold text-sm md:text-base">
+                        {user.posts} posts
+                      </span>
+                      <span className="text-base md:text-lg text-white font-semibold flex items-center justify-between gap-1">
+                        <Image
+                          src={"/images/astronaut.png"}
+                          alt="astronaut"
+                          width={20}
+                          height={20}
+                        />{" "}
+                        {user.value.toLocaleString()}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        {users.length === 0 && (
+            ))}
+            {/* Duplicate users for continuous effect */}
+            {users.map((user, index) => (
+              <div
+                key={`duplicate-${user.id}-${index}`} // Unique key for the duplicate set
+                className="flex-shrink-0 w-60 sm:w-64 md:w-72 lg:w-70 h-20 md:h-20 lg:h-22 p-3 mx-2 bg-[#111111] rounded-xl shadow-md border-2 border-[#1E1E1E]
+                         transform transition-transform duration-300 cursor-pointer"
+              >
+                <div className="flex items-center space-x-3">
+                  <img
+                    src={
+                      user.avatar ||
+                      `https://placehold.co/40x40/4b5563/ffffff?text=${user.name.charAt(
+                        0
+                      )}`
+                    }
+                    alt={user.name}
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border-2 object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null;
+                      target.src =
+                        "https://placehold.co/40x40/4b5563/ffffff?text=?";
+                    }}
+                  />
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-base md:text-lg text-white truncate max-w-[150px] sm:max-w-[180px] md:max-w-[200px]">
+                      {user.name}
+                    </span>
+                    <div className="flex space-x-2 items-center justify-between">
+                      <span className="text-gray-500 font-semibold text-sm md:text-base">
+                        {user.posts} posts
+                      </span>
+                      <span className="text-base md:text-lg text-white font-semibold flex items-center justify-between gap-1">
+                        <Image
+                          src={"/images/astronaut.png"}
+                          alt="astronaut"
+                          width={20}
+                          height={20}
+                        />{" "}
+                        {user.value.toLocaleString()}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </>
+        ) : (
           <div className="text-gray-500 p-4 text-center w-full">
             No items in this section.
           </div>

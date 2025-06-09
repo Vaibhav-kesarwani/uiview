@@ -1,10 +1,7 @@
-// components/TripleMarquee.tsx
-"use client"; // This component will also use client-side hooks
+"use client";
 
-import React from "react";
 import Marquee from "./ui/marquee";
 
-// Define the User type (can be shared from Marquee.tsx or defined here)
 type User = {
   id: string;
   name: string;
@@ -18,7 +15,6 @@ interface TripleMarqueeProps {
 }
 
 export default function TripleMarquee({ allUsers }: TripleMarqueeProps) {
-  // Function to split the array into roughly equal parts
   const splitArray = (arr: User[], parts: number): User[][] => {
     const result: User[][] = [];
     const chunkSize = Math.ceil(arr.length / parts);
@@ -30,7 +26,6 @@ export default function TripleMarquee({ allUsers }: TripleMarqueeProps) {
 
   const [usersPart1, usersPart2, usersPart3] = splitArray(allUsers, 3);
 
-  // Check if any part is empty to avoid rendering empty marquees
   if (!usersPart1.length && !usersPart2.length && !usersPart3.length) {
     return (
       <div className="text-gray-400 text-center py-8">
@@ -40,8 +35,11 @@ export default function TripleMarquee({ allUsers }: TripleMarqueeProps) {
   }
 
   return (
-    // Use responsive margin: mb-8 for mobile, mb-25 for larger screens
-    <div className="flex flex-col mb-8 md:mb-25">
+    <div className="flex flex-col mb-25">
+      <h1 className="mb-10 font-bold text-4xl md:text-5xl flex items-center justify-center text-center w-full">
+        Top Creators
+      </h1>
+
       {usersPart1.length > 0 && (
         <Marquee users={usersPart1} initialDirection="forward" />
       )}
