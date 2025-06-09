@@ -131,64 +131,64 @@ const navSections = [
     {
       href: "/",
       title: "All",
-      icon: "book",
+      icon: "openbook",
     },
     {
       href: "/",
       title: "Checkboxes",
-      icon: "",
+      icon: "checkbox",
     },
     {
       href: "/",
       title: "Cards",
-      icon: "",
+      icon: "card",
     },
     {
       href: "/",
       title: "Inputs",
-      icon: "",
+      icon: "input",
     },
     {
       href: "/",
       title: "Forms",
-      icon: "",
+      icon: "form",
     },
     {
       href: "/",
       title: "Tooltips",
-      icon: "",
+      icon: "tooltip",
     },
   ],
   [
     {
       href: "/",
       title: "Buttons",
-      icon: "",
+      icon: "button",
     },
     {
       href: "/",
       title: "Toggle switches",
-      icon: "",
+      icon: "toggle_switch",
     },
     {
       href: "/",
       title: "Loaders",
-      icon: "",
+      icon: "loader",
     },
     {
       href: "/",
       title: "Radio buttons",
-      icon: "",
+      icon: "radio_button",
     },
     {
       href: "/",
       title: "Patterns",
-      icon: "",
+      icon: "pattern",
     },
     {
       href: "/",
       title: "My favorites",
-      icon: "",
+      icon: "my_favorites",
     },
   ],
 ];
