@@ -15,45 +15,8 @@ import SearchBar from "./search-bar";
 import CreateButton from "./create-button";
 import AuthModal from "./ui/auth-modal";
 import { useState } from "react";
-
-const navSections = [
-  [
-    {
-      href: "/docs",
-      title: "Introduction",
-      description:
-        "Re-usable components built using Radix UI and Tailwind CSS.",
-    },
-    {
-      href: "/docs/installation",
-      title: "Installation",
-      description: "How to install dependencies and structure your app.",
-    },
-    {
-      href: "/docs/installation",
-      title: "Installation",
-      description: "How to install dependencies and structure your app.",
-    },
-  ],
-  [
-    {
-      href: "/docs",
-      title: "Introduction",
-      description:
-        "Re-usable components built using Radix UI and Tailwind CSS.",
-    },
-    {
-      href: "/docs/installation",
-      title: "Installation",
-      description: "How to install dependencies and structure your app.",
-    },
-    {
-      href: "/docs/installation",
-      title: "Installation",
-      description: "How to install dependencies and structure your app.",
-    },
-  ],
-];
+import { navSections } from "@/content/config";
+import { iconLibrary } from "@/icons/icon";
 
 export function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -69,11 +32,18 @@ export function Navbar() {
               <ul className="grid gap-2 md:w-[600px] lg:w-[700px] lg:grid-cols-[1fr_1fr_.95fr]">
                 {navSections.map((section, index) => (
                   <ul key={index} className="grid grid-cols-1 gap-2">
-                    {section.map((item, idx) => (
-                      <ListItem key={idx} href={item.href} title={item.title}>
-                        {item.description}
-                      </ListItem>
-                    ))}
+                    {section.map((item, idx) => {
+                      const Icon = iconLibrary[item.icon];
+
+                      return (
+                        <ListItem key={idx} href={item.href}>
+                          <span className="flex items-center gap-3 text-white">
+                            {Icon && <Icon className="w-4 h-4 text-white" />}
+                            <span>{item.title}</span>
+                          </span>
+                        </ListItem>
+                      );
+                    })}
                   </ul>
                 ))}
                 <li className="row-span-1">

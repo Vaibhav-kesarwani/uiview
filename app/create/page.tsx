@@ -9,7 +9,7 @@ import {
 } from "@codesandbox/sandpack-react";
 import { autocompletion } from "@codemirror/autocomplete";
 import { amethyst } from "@codesandbox/sandpack-themes";
-import files from "@/content/create_data";
+import { files } from "@/content/config";
 
 export default function CreatePage() {
   return (

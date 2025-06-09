@@ -1,3 +1,4 @@
+// Files for the react compiler
 const files = {
   "/public/index.html": {
     code: `<!DOCTYPE html>
@@ -124,4 +125,72 @@ h1 {
   },
 };
 
-export default files;
+// Nav section for the navbar under elements
+const navSections = [
+  [
+    {
+      href: "/",
+      title: "All",
+      icon: "book",
+    },
+    {
+      href: "/",
+      title: "Checkboxes",
+      icon: "",
+    },
+    {
+      href: "/",
+      title: "Cards",
+      icon: "",
+    },
+    {
+      href: "/",
+      title: "Inputs",
+      icon: "",
+    },
+    {
+      href: "/",
+      title: "Forms",
+      icon: "",
+    },
+    {
+      href: "/",
+      title: "Tooltips",
+      icon: "",
+    },
+  ],
+  [
+    {
+      href: "/",
+      title: "Buttons",
+      icon: "",
+    },
+    {
+      href: "/",
+      title: "Toggle switches",
+      icon: "",
+    },
+    {
+      href: "/",
+      title: "Loaders",
+      icon: "",
+    },
+    {
+      href: "/",
+      title: "Radio buttons",
+      icon: "",
+    },
+    {
+      href: "/",
+      title: "Patterns",
+      icon: "",
+    },
+    {
+      href: "/",
+      title: "My favorites",
+      icon: "",
+    },
+  ],
+];
+
+export { files, navSections };
