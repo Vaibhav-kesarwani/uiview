@@ -7,7 +7,7 @@ const NavCard = () => {
       <div className="card">
         <img src="/images/astronaut.png" alt="" className="image" />
         <div className="heading -mt-10 ml-8 items-center text-2xl font-bold font-sans flex">
-          We&apos;re on Social Media  🚀
+          We&apos;re on Social Media!
         </div>
         <div className="icons">
           <a href="https://www.instagram.com/" className="instagram">
