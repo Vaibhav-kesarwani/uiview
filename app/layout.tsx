@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/Theme-Provider/theme-provider";
+import { ThemeProvider } from "@/components/theme-provider";
 import { fontMono, fontSans } from "@/lib/font";
 import { cn } from "@/lib/utils";
 
 import "@/styles/globals.css";
-import { Header } from "@/components/Header/header";
-import Footer from "@/components/Footer/footer";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Uiview | Modern UI Component Library",
