@@ -28,34 +28,47 @@ export function Navbar() {
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-            <NavigationMenuContent className="dark:bg-[#171717] rounded-xl p-5 shadow-lg">
-              <ul className="grid gap-2 md:w-[600px] lg:w-[700px] lg:grid-cols-[1fr_1fr_.95fr]">
-                {navSections.map((section, index) => (
-                  <ul key={index} className="grid grid-cols-1 gap-2">
-                    {section.map((item, idx) => {
+            <NavigationMenuContent className="dark:bg-[#171717] rounded-xl p-3 shadow-lg">
+              <ul className="grid grid-cols-3 gap-3 md:w-[600px] lg:w-[700px]">
+                {/* Nav items container spanning first 2 columns */}
+                <li className="col-span-2">
+                  <ul className="grid grid-cols-2 gap-3">
+                    {navSections.flat().map((item, idx) => {
                       const Icon = iconLibrary[item.icon];
 
                       return (
-                        <ListItem key={idx} href={item.href}>
-                          <span className="flex items-center gap-3 text-white">
-                            {Icon && <Icon className="w-4 h-4 text-white" />}
-                            <span>{item.title}</span>
-                          </span>
-                        </ListItem>
+                        <li key={idx}>
+                          <Link
+                            href={item.href}
+                            className="flex h-14 items-center gap-3 rounded-lg bg-zinc-800 p-4 text-white transition-colors hover:bg-zinc-700"
+                          >
+                            {Icon && (
+                              <Icon
+                                className="w-5 h-5 text-white"
+                                strokeWidth={2.5}
+                              />
+                            )}
+                            <span className="text-base font-medium">
+                              {item.title}
+                            </span>
+                          </Link>
+                        </li>
                       );
                     })}
                   </ul>
-                ))}
-                <li className="row-span-1">
+                </li>
+
+                {/* Highlight box spanning full height in 3rd column */}
+                <li className="row-span-full rounded-lg bg-gradient-to-b from-muted/50 to-muted text-white hover:shadow-lg transition-shadow">
                   <NavigationMenuLink asChild>
                     <Link
                       href="/"
-                      className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
+                      className="flex h-full w-full flex-col justify-end no-underline select-none focus:shadow-md"
                     >
-                      <div className="mt-4 mb-2 text-lg font-medium">
+                      <div className="mt-4 mb-2 text-lg font-semibold">
                         shadcn/ui
                       </div>
-                      <p className="text-muted-foreground text-sm leading-tight">
+                      <p className="text-sm leading-tight text-muted-foreground">
                         Beautifully designed components built with Tailwind CSS.
                       </p>
                     </Link>
@@ -88,28 +101,5 @@ export function Navbar() {
 
       <AuthModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
-  );
-}
-
-function ListItem({
-  title,
-  children,
-  href,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
-  return (
-    <li {...props}>
-      <NavigationMenuLink asChild>
-        <Link
-          href={href}
-          className="dark:bg-[#232323] dark:hover:bg-[#2c2c2c] rounded-md p-4 flex flex-col gap-1"
-        >
-          <div className="text-sm leading-none font-medium">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-            {children}
-          </p>
-        </Link>
-      </NavigationMenuLink>
-    </li>
   );
 }
