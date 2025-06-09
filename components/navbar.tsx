@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import SearchBar from "./search-bar";
 import CreateButton from "./create-button";
-import AuthModal from "../ui/auth-modal";
+import AuthModal from "./ui/auth-modal";
 import { useState } from "react";
 
 const navSections = [

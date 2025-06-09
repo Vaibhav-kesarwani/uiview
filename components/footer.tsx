@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="bg-gray-900 text-white pb-62 pt-20">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 p-10 rounded-2xl">
