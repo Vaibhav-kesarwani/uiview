@@ -1,7 +1,5 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,19 +9,24 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import SearchBar from "./search-bar";
-import CreateButton from "./create-button";
-import AuthModal from "./ui/auth-modal";
-import { useState } from "react";
 import { navSections } from "@/content/config";
 import { iconLibrary } from "@/icons/icon";
+import Link from "next/link";
+import { useState } from "react";
+import CreateButton from "./create-button";
+import Logo from "./logo";
 import NavCard from "./nav-card";
+import SearchBar from "./search-bar";
+import AuthModal from "./ui/auth-modal";
 
 export function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="items-center justify-between gap-110 hidden lg:flex">
+    <div className="items-center justify-between gap-10 hidden lg:flex">
+      {/* logo */}
+      <Logo />
+
       {/* Centered Navigation */}
       <NavigationMenu viewport={false}>
         <NavigationMenuList>
@@ -79,7 +82,7 @@ export function Navbar() {
       </NavigationMenu>
 
       {/* Search & Create - aligned to the right */}
-      <div className="flex items-center justify-between gap-5">
+      <div className=" flex items-center justify-between gap-5">
         <SearchBar />
         <Link href="" onClick={() => setIsModalOpen(true)}>
           <CreateButton />

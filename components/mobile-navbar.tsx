@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Logo from "./logo";
 
 export default function MobileNavbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -24,28 +25,11 @@ export default function MobileNavbar() {
     <div className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A] px-4 py-3 lg:hidden shadow-md">
       {/* Topbar */}
       <div className="flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold relative inline-block">
-          <span
-            className="relative bg-clip-text text-transparent"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, #B88746 10%, #FDF5A6 150%)",
-            }}
-          >
-            UI
-            <span
-              aria-hidden="true"
-              className="absolute left-0 bottom-0 h-[4px] w-full rounded-full"
-              style={{
-                background:
-                  "linear-gradient(to right, #B88746 10%, #FDF5A6 150%)",
-              }}
-            />
-          </span>
-          <span className="ml-1 text-2xl text-gray-300">view</span>
-        </Link>
+        {/* Logo */}
+        <Logo />
 
-        <button
+        {/* Menu Bar */}
+        <button 
           onClick={() => setIsOpen(!isOpen)}
           className="text-white focus:outline-none"
         >
@@ -59,13 +43,25 @@ export default function MobileNavbar() {
           <Link href="/" onClick={() => setIsOpen(false)} className="text-xl">
             Home
           </Link>
-          <Link href="/components" onClick={() => setIsOpen(false)} className="text-xl">
+          <Link
+            href="/components"
+            onClick={() => setIsOpen(false)}
+            className="text-xl"
+          >
             Components
           </Link>
-          <Link href="/about" onClick={() => setIsOpen(false)} className="text-xl">
+          <Link
+            href="/about"
+            onClick={() => setIsOpen(false)}
+            className="text-xl"
+          >
             About
           </Link>
-          <Link href="/login" onClick={() => setIsOpen(false)} className="text-xl">
+          <Link
+            href="/login"
+            onClick={() => setIsOpen(false)}
+            className="text-xl"
+          >
             Login
           </Link>
         </div>
