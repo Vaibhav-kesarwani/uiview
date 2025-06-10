@@ -31,7 +31,7 @@ export function SiteHeader() {
             <CommandMenu />
           </div>
 
-          <div className="items-center gap-1 hidden lg:flex">
+          <div className="items-center gap-1 hidden md:flex">
             <Link
               href={siteConfig.links.github}
               target="_blank"
