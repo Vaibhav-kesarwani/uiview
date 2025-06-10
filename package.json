@@ -19,6 +19,7 @@
     "@t3-oss/env-nextjs": "^0.13.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
     "jotai": "^2.12.5",
     "lucide-react": "^0.513.0",
     "next": "15.3.3",
@@ -27,6 +28,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-navigation-menu": "link:@radix-ui@radix-ui/react-navigation-menu",
+    "styled-components": "^6.1.18",
     "tailwind-merge": "^3.3.0",
     "zod": "^3.25.57"
   },

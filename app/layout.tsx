@@ -4,6 +4,7 @@ import { absoluteUrl, cn, constructMetadata } from "@/lib/utils";
 import { fontMono, fontSans } from "@/lib/fonts";
 import { Provider as JotaiProvider } from "jotai";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import StyledComponentsRegistry from "@/lib/registry";
 
 import "../styles/globals.css";
 
@@ -49,6 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head />
       <body
         className={cn(
           "relative flex w-full flex-col justify-center overflow-x-hidden scroll-smooth bg-background font-sans antialiased",
@@ -56,11 +58,13 @@ export default function RootLayout({
           fontMono.variable
         )}
       >
-        <JotaiProvider>
-          <ThemeProvider attribute={"class"} defaultTheme="dark">
-            <TooltipProvider>{children}</TooltipProvider>
-          </ThemeProvider>
-        </JotaiProvider>
+        <StyledComponentsRegistry>
+          <JotaiProvider>
+            <ThemeProvider attribute={"class"} defaultTheme="dark">
+              <TooltipProvider>{children}</TooltipProvider>
+            </ThemeProvider>
+          </JotaiProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

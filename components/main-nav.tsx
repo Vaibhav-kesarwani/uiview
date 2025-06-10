@@ -20,7 +20,7 @@ export function MainNav() {
   const pathname = usePathname();
 
   return (
-    <div className="hidden lg:flex items-center space-x-3">
+    <div className="ml-10 hidden lg:flex items-center space-x-3">
       <Logo />
 
       <nav className="flex items-center space-x-2 mt-1">
