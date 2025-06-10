@@ -6,7 +6,7 @@ import { SparklesText } from "../ui/sparkle-text";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center mt-30 h-screen px-4 text-center">
+    <div className="flex flex-col items-center mt-30 px-4 text-center overflow-hidden">
       {/* Badge + Avatar */}
       <div className="flex flex-wrap items-center justify-center gap-5 mb-4 text-[#47D67C]">
         <p className="flex items-center gap-2 whitespace-nowrap font-bold text-sm sm:text-base">
