@@ -6,15 +6,9 @@ import Link from "next/link";
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
   return (
-    // Main footer container with background gradient and text color
-    // pb-16 provides a good amount of bottom padding for mobile and for Desktop its pb-56
     <footer className="relative z-10 bg-gradient-to-b from-[#080808] via-[#0D0D0D] to-[#101010] text-white pt-10 pb-16 lg:pb-56 font-sans">
-      {/* Absolute positioned top border line for visual separation */}
       <div className="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-[#B88746] via-[#FDF5A6] to-[#B88746] opacity-50" />
-
-      {/* Main content wrapper*/}
       <div className="mx-auto max-w-7xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-12 rounded-2xl">
-        {/* Left Side: Logo, Description, MIT License info, Socials, and Copyright */}
         <div className="flex flex-col justify-between">
           <div>
             <Logo />
@@ -48,8 +42,6 @@ export function SiteFooter() {
               </p>
             </div>
           </div>
-
-          {/* Social media icons with hover effects */}
           <div className="flex gap-4 mt-6">
             <a
               href="[https://instagram.com](https://instagram.com)"
@@ -84,17 +76,11 @@ export function SiteFooter() {
               <Linkedin className="h-6 w-6 text-gray-400 hover:text-blue-500 transition-colors" />
             </a>
           </div>
-          {/* Copyright text */}
           <div className="mt-10 text-gray-500 text-sm flex gap-4">
             &copy; {currentYear} Uiview. All rights reserved.
           </div>
         </div>
-
-        {/* Right Side: Resources, Information, Legal links
-            - grid layout: single column on mobile, three columns from medium screens up
-        */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Resources Section */}
           <div>
             <h3 className="text-xl font-semibold mb-3">Resources</h3>
             <ul className="space-y-2 text-sm text-gray-500">
@@ -116,8 +102,6 @@ export function SiteFooter() {
               </li>
             </ul>
           </div>
-
-          {/* Information Section */}
           <div>
             <h3 className="text-xl font-semibold mb-3">Information</h3>
             <ul className="space-y-2 text-sm text-gray-500">
@@ -143,8 +127,6 @@ export function SiteFooter() {
               </li>
             </ul>
           </div>
-
-          {/* Legal Section */}
           <div>
             <h3 className="text-xl font-semibold mb-3">Legal</h3>
             <ul className="space-y-2 text-sm text-gray-500">
