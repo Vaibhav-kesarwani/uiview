@@ -1,21 +1,23 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata, Viewport } from "next";
+import { ThemeProvider } from "next-themes";
+import { absoluteUrl, cn, constructMetadata } from "@/lib/utils";
+import { fontMono, fontSans } from "@/lib/fonts";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import "../styles/globals.css";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const viewport: Viewport = {
+  colorScheme: "dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Uiview | Modern UI Component Library",
   description:
     "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
+  image: absoluteUrl("/og"),
   openGraph: {
     title: "Uiview | Modern UI Component Library",
     description:
@@ -30,24 +32,13 @@ export const metadata: Metadata = {
     title: "Uiview | Modern UI Component Library",
     description:
       "Uiview is a modern UI component library offering reusable, scalable, and visually polished building blocks for fast, consistent interface development.",
-    images: ["https://uiview.vercel.app/og.png"],
+    images: ["https://uiview.vercel.app/og"],
     creator: "@Vaibhav_kesarwani",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
   icons: {
     icon: "/icon.png",
   },
-};
+});
 
 export default function RootLayout({
   children,
@@ -55,11 +46,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={cn(
+          "relative flex w-full flex-col justify-center overflow-x-hidden scroll-smooth bg-background font-sans antialiased",
+          fontSans.variable,
+          fontMono.variable
+        )}
       >
-        {children}
+        <ThemeProvider attribute={"class"} defaultTheme="dark">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
