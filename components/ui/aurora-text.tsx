@@ -13,7 +13,7 @@ export const AuroraText = memo(
   ({
     children,
     className = "",
-    colors = ["#B88746", "#FDF5A6"],
+    colors = ["#B88746", "#D4AF37", "#FDF5A6", "#FFF8DC"],
     speed = 1,
   }: AuroraTextProps) => {
     const gradientStyle = {
@@ -37,7 +37,7 @@ export const AuroraText = memo(
         </span>
       </span>
     );
-  },
+  }
 );
 
 AuroraText.displayName = "AuroraText";
