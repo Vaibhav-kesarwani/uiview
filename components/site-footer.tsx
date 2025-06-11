@@ -1,12 +1,20 @@
+"use client";
+
 import React from "react";
 import { Instagram, Twitter, Github, Linkedin, Scale } from "lucide-react";
 import Logo from "./logo";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="relative z-10 bg-gradient-to-b from-[#080808] via-[#0D0D0D] to-[#101010] text-white pt-10 pb-16 lg:pb-56 font-sans">
+    <motion.footer
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative z-10 bg-gradient-to-b from-[#080808] via-[#0D0D0D] to-[#101010] text-white pt-10 pb-16 lg:pb-56 font-sans"
+    >
       <div className="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-[#B88746] via-[#FDF5A6] to-[#B88746] opacity-50" />
       <div className="mx-auto max-w-7xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-12 rounded-2xl">
         <div className="flex flex-col justify-between">
@@ -154,6 +162,6 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
