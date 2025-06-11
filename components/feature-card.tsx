@@ -132,10 +132,11 @@ const SkeletonFour = () => (
     initial={{ opacity: 0, y: 30 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, ease: "easeInOut" }}
-    className="relative h-full w-full rounded-xl p-6 shadow-lg backdrop-blur-md hover:shadow-2xl flex flex-col items-center justify-center text-center bg-gradient-to-br from-[#1c1c1c] via-[#131313] to-[#1c1c1c] border border-[#2b2b2b]"
+    className="relative z-10 h-full w-full rounded-xl p-6 shadow-lg backdrop-blur-md hover:shadow-2xl flex flex-col items-center justify-center text-center bg-gradient-to-br from-[#1c1c1c] via-[#131313] to-[#1c1c1c] border border-[#2b2b2b]"
   >
     <div className="absolute inset-0 z-0 bg-[radial-gradient(#facc15_1px,transparent_1px)] [background-size:16px_16px] opacity-6" />
-    <div className="space-y-2">
+
+    <div className="space-y-2 z-10">
       <h3 className="text-lg font-semibold text-[#f6e9cd]">
         Love this project?
       </h3>
@@ -154,17 +155,16 @@ const SkeletonFour = () => (
 
     <Button
       asChild
-      variant="default"
-      className="mt-6 w-full gap-2 text-sm font-medium bg-yellow-400/10 text-yellow-300 hover:bg-yellow-400/20"
+      className="z-20 mt-6 w-full gap-2 text-sm font-medium bg-yellow-400/10 text-yellow-300 hover:bg-yellow-400/20 rounded-xl border border-[#B88746]/50 p-4"
     >
       <motion.a
-          key={index}
-          href={post.link}
-          whileHover={{ scale: 1.03 }}
-          transition={{ type: "spring", stiffness: 300 }}
-          className="rounded-xl border border-[#B88746]/50 bg-[#2c2214]/30 hover:bg-[#3b2e1b]/40 p-4 text-sm font-medium text-[#f6e9cd] text-center"
-        >
-        <Star className="w-4 h-4" />
+        whileHover={{ scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 300, damping: 15 }}
+        href="https://github.com/Vaibhav-kesarwani"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="z-20 text-[#f6e9cd] text-center w-full block"
+      >
         Star on GitHub
       </motion.a>
     </Button>
