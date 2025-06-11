@@ -1,22 +1,33 @@
+"use client";
+
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Icons } from "./icons";
+import { LuxeButton } from "./luxe-button";
 import { MainNav } from "./main-nav";
 import { MobileNav } from "./mobile-nav";
 import { ModeToggle } from "./mode-toggle";
 import { buttonVariants } from "./ui/button";
 import { CommandMenu } from "./ui/command-menu";
-import { BubbleButton } from "./bubble-button";
+import { motion } from "framer-motion";
 
 export function SiteHeader() {
   return (
-    <header
+    <motion.header
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className={cn(
         "supports-backdrop-blur:bg-background/90 sticky top-0 z-40 w-full border-b border-border bg-background/40 backdrop-blur-lg"
       )}
     >
-      <div className="flex h-20 items-center justify-between">
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        className="flex h-20 items-center justify-between"
+      >
         <div className="flex items-center">
           <MainNav />
           <MobileNav />
@@ -24,7 +35,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <div className="mr-10 hidden lg:flex">
-            <BubbleButton />
+            <LuxeButton />
           </div>
 
           <div className="min-w-[250px] max-w-[200px] md:max-w-[280px]">
@@ -86,7 +97,7 @@ export function SiteHeader() {
           </div>
           <ModeToggle className="flex mr-2 md:mr-5" />
         </div>
-      </div>
-    </header>
+      </motion.div>
+    </motion.header>
   );
 }
