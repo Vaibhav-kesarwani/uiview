@@ -67,7 +67,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         onClick={() => setOpen(true)}
         className={cn(
           "relative h-12 w-full justify-start rounded-xl text-sm font-medium sm:pr-12 md:w-64 overflow-hidden group",
-          "border border-[#B88746] bg-[#0f0f0f]/80 text-[#f6e9cd] hover:bg-[#1a1a1a]"
+          "border border-[#B88746] bg-[#1a1a1a] text-[#f6e9cd]"
         )}
         {...props}
       >
@@ -75,47 +75,18 @@ export function CommandMenu({ ...props }: DialogProps) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={18}
-            viewBox="0 0 24 24"
-            strokeWidth={2}
             height={18}
+            viewBox="0 0 24 24"
             fill="none"
+            stroke="#F6E8CD"
+            strokeWidth={2}
           >
-            <circle stroke="url(#goldGradientCircle)" r={8} cy={11} cx={11} />
-            <line
-              stroke="url(#goldGradientLine)"
-              y2="16.65"
-              y1={22}
-              x2="16.65"
-              x1={22}
-            />
-            <defs>
-              <linearGradient
-                id="goldGradientCircle"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop offset="10%" stopColor="#B88746" />
-                <stop offset="100%" stopColor="#FDF5A6" />
-              </linearGradient>
-              <linearGradient
-                id="goldGradientLine"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop offset="10%" stopColor="#B88746" />
-                <stop offset="100%" stopColor="#FDF5A6" />
-              </linearGradient>
-            </defs>
+            <circle cx={11} cy={11} r={8} />
+            <line x1={16.65} y1={16.65} x2={22} y2={22} />
           </svg>
           Search documentation...
         </span>
-        <kbd
-          className="mt-2 mr-1 absolute right-[0.3rem] top-[0.3rem] h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium border-[#B88746] bg-[#080808]/50 text-[#f6e9cd] sm:flex"
-        >
+        <kbd className="mt-2 mr-1 absolute right-[0.3rem] top-[0.3rem] h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium border-[#B88746] bg-[#1a1a1a]/20 text-[#F6E8CD] sm:flex">
           <span className="text-xs">⌘</span>K
         </kbd>
         {/* Shimmer Glimmer */}
