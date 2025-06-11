@@ -14,7 +14,6 @@ import { useTheme } from "next-themes";
 
 import { docsConfig } from "@/config/docs";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import {
   CommandDialog,
   CommandEmpty,
@@ -24,6 +23,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
+import { motion } from "framer-motion";
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter();
@@ -58,65 +58,79 @@ export function CommandMenu({ ...props }: DialogProps) {
 
   return (
     <>
-      <Button
-        variant="outline"
-        className={cn(
-          "relative h-11 w-full justify-start rounded-[0.5rem] text-sm font-normal shadow-none sm:pr-12 md:w-64",
-          "border-[#B88746] hover:border-[#FDF5A6] bg-[#080808]/50 text-[#848B98]" 
-        )}
+      <motion.button
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
         onClick={() => setOpen(true)}
+        className={cn(
+          "relative h-12 w-full justify-start rounded-xl text-sm font-medium sm:pr-12 md:w-64 overflow-hidden group",
+          "border border-[#B88746] bg-[#0f0f0f]/80 text-[#f6e9cd] hover:bg-[#1a1a1a]"
+        )}
         {...props}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={18}
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          height={18}
-          fill="none"
-          className="mr-2"
-        >
-          <circle stroke="url(#goldGradientCircle)" r={8} cy={11} cx={11} />
-          <line
-            stroke="url(#goldGradientLine)"
-            y2="16.65"
-            y1={22}
-            x2="16.65"
-            x1={22}
-          />
-          <defs>
-            <linearGradient
-              id="goldGradientCircle"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%"
-            >
-              <stop offset="10%" stopColor="#B88746" />
-              <stop offset="100%" stopColor="#FDF5A6" />
-            </linearGradient>
-            <linearGradient
-              id="goldGradientLine"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%"
-            >
-              <stop offset="10%" stopColor="#B88746" />
-              <stop offset="100%" stopColor="#FDF5A6" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <span className="inline-flex">Search documentation...</span>
+        <span className="ml-2 relative z-10 flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={18}
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            height={18}
+            fill="none"
+          >
+            <circle stroke="url(#goldGradientCircle)" r={8} cy={11} cx={11} />
+            <line
+              stroke="url(#goldGradientLine)"
+              y2="16.65"
+              y1={22}
+              x2="16.65"
+              x1={22}
+            />
+            <defs>
+              <linearGradient
+                id="goldGradientCircle"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop offset="10%" stopColor="#B88746" />
+                <stop offset="100%" stopColor="#FDF5A6" />
+              </linearGradient>
+              <linearGradient
+                id="goldGradientLine"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop offset="10%" stopColor="#B88746" />
+                <stop offset="100%" stopColor="#FDF5A6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          Search documentation...
+        </span>
         <kbd
-          className={cn(
-            "mt-1.5 mr-1 pointer-events-none absolute right-[0.3rem] top-[0.3rem] h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex",
-            "border-[#B88746] bg-[#080808]/50"
-          )}
+          className="mt-2 mr-1 absolute right-[0.3rem] top-[0.3rem] h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium border-[#B88746] bg-[#080808]/50 text-[#f6e9cd] sm:flex"
         >
           <span className="text-xs">⌘</span>K
         </kbd>
-      </Button>
+        {/* Shimmer Glimmer */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-[#B88746]/40 to-transparent blur-sm opacity-0 group-hover:opacity-100"
+          animate={{ x: ["-100%", "100%"] }}
+          transition={{ duration: 1.4, ease: "easeInOut", repeat: Infinity }}
+        />
+        {/* Pulse Glow */}
+        <motion.div
+          className="absolute -inset-px rounded-2xl border border-yellow-400/20 pointer-events-none"
+          animate={{ opacity: [0.2, 0.6, 0.2] }}
+          transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </motion.button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
