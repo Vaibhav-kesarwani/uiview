@@ -61,14 +61,59 @@ export function CommandMenu({ ...props }: DialogProps) {
       <Button
         variant="outline"
         className={cn(
-          "relative h-11 w-full justify-start rounded-[0.5rem] bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-64",
+          "relative h-11 w-full justify-start rounded-[0.5rem] text-sm font-normal shadow-none sm:pr-12 md:w-64",
+          "border-[#B88746] hover:border-[#FDF5A6] bg-[#080808]/50 text-[#848B98]" 
         )}
         onClick={() => setOpen(true)}
         {...props}
       >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={18}
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          height={18}
+          fill="none"
+          className="mr-2"
+        >
+          <circle stroke="url(#goldGradientCircle)" r={8} cy={11} cx={11} />
+          <line
+            stroke="url(#goldGradientLine)"
+            y2="16.65"
+            y1={22}
+            x2="16.65"
+            x1={22}
+          />
+          <defs>
+            <linearGradient
+              id="goldGradientCircle"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="10%" stopColor="#B88746" />
+              <stop offset="100%" stopColor="#FDF5A6" />
+            </linearGradient>
+            <linearGradient
+              id="goldGradientLine"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="10%" stopColor="#B88746" />
+              <stop offset="100%" stopColor="#FDF5A6" />
+            </linearGradient>
+          </defs>
+        </svg>
         <span className="inline-flex">Search documentation...</span>
-        {/* <span className="inline-flex lg:hidden">Search...</span> */}
-        <kbd className="mt-1.5 mr-1 pointer-events-none absolute right-[0.3rem] top-[0.3rem] h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
+        <kbd
+          className={cn(
+            "mt-1.5 mr-1 pointer-events-none absolute right-[0.3rem] top-[0.3rem] h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex",
+            "border-[#B88746] bg-[#080808]/50"
+          )}
+        >
           <span className="text-xs">⌘</span>K
         </kbd>
       </Button>
