@@ -6,7 +6,9 @@ import { Spotlight } from "@/components/ui/spotlight";
 export default function Home() {
   return (
     <>
-      <Spotlight />
+      <div className="hidden lg:flex">
+        <Spotlight />
+      </div>
       <Hero />
       <Feature />
       <TopCreator />
