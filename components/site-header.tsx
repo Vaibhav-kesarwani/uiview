@@ -43,59 +43,39 @@ export function SiteHeader() {
           </div>
 
           <div className="items-center gap-1 hidden md:flex">
-            <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0"
-                )}
-              >
-                <Icons.github className="size-5" />
-                <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0"
-                )}
-              >
-                <Icons.twitter className="size-5" />
-                <span className="sr-only">Twitter</span>
-              </div>
-            </Link>
-            <Link
-              href={siteConfig.links.linkedin}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0"
-                )}
-              >
-                <Icons.linkedin className="size-5" />
-                <span className="sr-only">LinkedIn</span>
-              </div>
-            </Link>
+            {[
+              {
+                href: siteConfig.links.github,
+                Icon: Icons.github,
+                label: "GitHub",
+              },
+              {
+                href: siteConfig.links.twitter,
+                Icon: Icons.twitter,
+                label: "Twitter",
+              },
+              {
+                href: siteConfig.links.linkedin,
+                Icon: Icons.linkedin,
+                label: "LinkedIn",
+              },
+            ].map(({ href, Icon, label }) => (
+              <Link href={href} key={label} target="_blank" rel="noreferrer">
+                <div
+                  className={cn(
+                    buttonVariants({ variant: "ghost" }),
+                    "hover:shadow-[0_0_8px_#F6E8CD66] hover:bg-[#F6E8CD0D] w-9 h-9 p-0 flex items-center justify-center rounded-full border border-[#F6E8CD]/20 hover:border-[#F6E8CD]/40 transition-colors duration-300 group"
+                  )}
+                >
+                  <Icon className="size-5 text-[#F6E8CD] group-hover:text-[#FFD700] transition duration-300" />
+                  <span className="sr-only">{label}</span>
+                </div>
+              </Link>
+            ))}
           </div>
-          <ModeToggle className="flex mr-2 md:mr-5" />
+          <div className="hover:shadow-[0_0_8px_#F6E8CD66] hover:bg-[rgba(246,232,205,0.05)] w-9 h-9 p-0 flex items-center justify-center rounded-full border border-[#F6E8CD]/20 hover:border-[#F6E8CD]/40 transition-colors duration-300 group mr-2 md:mr-5">
+            <ModeToggle className="pointer-events-none text-[#F6E8CD] group-hover:text-[#FFD700] rounded-full transition duration-300" />
+          </div>
         </div>
       </motion.div>
     </motion.header>
