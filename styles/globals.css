@@ -175,6 +175,11 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .dark ::selection {
+    background-color: #fdf5a6;
+    color: #000;
+  }
 }
 
 @layer utilities {
