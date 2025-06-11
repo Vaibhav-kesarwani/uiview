@@ -43,7 +43,7 @@ const SkeletonOne = () => (
       "text-[#f5e9d6] shadow-lg border border-[#2b2b2b]"
     )}
   >
-    <div className="absolute inset-0 z-0 bg-[radial-gradient(#facc15_1px,transparent_1px)] [background-size:16px_16px] opacity-5" />
+    <div className="absolute inset-0 z-0 bg-[radial-gradient(#facc15_1px,transparent_1px)] [background-size:16px_16px] opacity-6" />
     <motion.div
       whileHover={{ scale: 1.03 }}
       className="relative z-10 space-y-3"
@@ -76,7 +76,7 @@ const SkeletonTwo = () => (
           href={post.link}
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="rounded-xl border border-[#3a2f1d] bg-[#2c2214]/30 hover:bg-[#3b2e1b]/40 p-4 text-sm font-medium text-[#f6e9cd] text-center"
+          className="rounded-xl border border-[#B88746]/50 bg-[#2c2214]/30 hover:bg-[#3b2e1b]/40 p-4 text-sm font-medium text-[#f6e9cd] text-center"
         >
           {post.title}
         </motion.a>
@@ -110,7 +110,12 @@ const SkeletonTwo = () => (
 );
 
 const SkeletonThree = () => (
-  <div className="relative h-full w-full rounded-xl overflow-hidden bg-gradient-to-br from-[#121212] via-[#191919] to-[#121212] p-6 shadow-lg border border-[#2e2e2e] flex flex-col items-center justify-center text-center">
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+    className="relative h-full rounded-2xl p-6 shadow-xl bg-gradient-to-br from-[#141414] via-[#1c1c1c] to-[#141414] text-[#f5e9d6] flex flex-col justify-center text-center"
+  >
     <VelocityScroll>
       <span className="text-xl md:text-4xl font-semibold tracking-wide text-[#f5e9d6]">
         Build Fast. Design Beautifully.
@@ -119,7 +124,7 @@ const SkeletonThree = () => (
     <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/50 to-transparent" />
     <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black via-black/50 to-transparent" />
     <div className="pointer-events-none absolute bottom-0 w-[60%] h-24 rounded-full blur-3xl bg-yellow-400/10" />
-  </div>
+  </motion.div>
 );
 
 const SkeletonFour = () => (
@@ -129,6 +134,7 @@ const SkeletonFour = () => (
     transition={{ duration: 0.6, ease: "easeInOut" }}
     className="relative h-full w-full rounded-xl p-6 shadow-lg backdrop-blur-md hover:shadow-2xl flex flex-col items-center justify-center text-center bg-gradient-to-br from-[#1c1c1c] via-[#131313] to-[#1c1c1c] border border-[#2b2b2b]"
   >
+    <div className="absolute inset-0 z-0 bg-[radial-gradient(#facc15_1px,transparent_1px)] [background-size:16px_16px] opacity-6" />
     <div className="space-y-2">
       <h3 className="text-lg font-semibold text-[#f6e9cd]">
         Love this project?
@@ -151,14 +157,16 @@ const SkeletonFour = () => (
       variant="default"
       className="mt-6 w-full gap-2 text-sm font-medium bg-yellow-400/10 text-yellow-300 hover:bg-yellow-400/20"
     >
-      <a
-        href="https://github.com/your-repo"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <motion.a
+          key={index}
+          href={post.link}
+          whileHover={{ scale: 1.03 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          className="rounded-xl border border-[#B88746]/50 bg-[#2c2214]/30 hover:bg-[#3b2e1b]/40 p-4 text-sm font-medium text-[#f6e9cd] text-center"
+        >
         <Star className="w-4 h-4" />
         Star on GitHub
-      </a>
+      </motion.a>
     </Button>
   </motion.div>
 );
