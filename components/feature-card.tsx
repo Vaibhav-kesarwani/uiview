@@ -12,14 +12,14 @@ import { PointerHighlight } from "./ui/pointer-highlight";
 // Main Card Container
 export function FeatureCard() {
   return (
-    <div className="overflow-x-hidden px-4 md:px-8">
+    <div className="px-4 md:px-8">
       <BentoGrid className="max-w-5xl mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch content-center">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
             header={item.header}
             className={cn(
-              "h-full  flex flex-col",
+              "flex flex-col",
               i === 1 || i === 2 ? "md:col-span-2" : ""
             )}
           />
