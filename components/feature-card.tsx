@@ -114,7 +114,7 @@ const SkeletonThree = () => (
     initial={{ opacity: 0, y: 30 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, ease: "easeOut" }}
-    className="relative h-full rounded-2xl shadow-xl bg-gradient-to-br from-[#141414] via-[#1c1c1c] to-[#141414] text-[#f5e9d6] flex flex-col justify-center text-center"
+    className="overflow-hidden relative h-[200px] md:h-full rounded-2xl shadow-xl bg-gradient-to-br from-[#141414] via-[#1c1c1c] to-[#141414] text-[#f5e9d6] flex flex-col justify-center text-center"
   >
     <VelocityScroll>
       <span className="text-xl md:text-4xl font-semibold tracking-wide text-[#f5e9d6]">
