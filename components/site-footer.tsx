@@ -93,7 +93,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-3">Resources</h3>
-            <ul className="space-y-2 text-sm text-gray-500">
+            {/* <ul className="space-y-2 text-sm text-gray-500">
               <li>
                 <a
                   href="[https://cssbuttons.io](https://cssbuttons.io)"
@@ -110,11 +110,11 @@ export function SiteFooter() {
                   Neumorphism.io
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-3">Information</h3>
-            <ul className="space-y-2 text-sm text-gray-500">
+            {/* <ul className="space-y-2 text-sm text-gray-500">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
                   Blog
@@ -135,11 +135,11 @@ export function SiteFooter() {
                   Report bug
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-3">Legal</h3>
-            <ul className="space-y-2 text-sm text-gray-500">
+            {/* <ul className="space-y-2 text-sm text-gray-500">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
                   Terms and Conditions
@@ -160,7 +160,7 @@ export function SiteFooter() {
                   Disclaimer
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>
