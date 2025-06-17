@@ -8,9 +8,9 @@ export default function Hero() {
   return (
     <div className="flex flex-col items-center mt-30 px-4 text-center overflow-hidden">
       {/* Badge + Avatar */}
-      <div className="mt-5 flex flex-wrap items-center justify-center gap-5 mb-4 text-[#47D67C]">
+      <div className="mt-5 flex flex-wrap items-center justify-center gap-5 mb-4 text-[#D4AF37]">
         <p className="flex items-center gap-2 whitespace-nowrap font-bold text-sm sm:text-base">
-          <RocketIcon className="w-6 h-6 text-[#47D67C]" />
+          <RocketIcon className="w-6 h-6 text-[#D4AF37]" />
           <span className="underline underline-offset-4">
             20+ NEW ELEMENTS
           </span>{" "}
