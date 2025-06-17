@@ -66,7 +66,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         whileTap={{ scale: 0.97 }}
         onClick={() => setOpen(true)}
         className={cn(
-          "relative h-12 w-full justify-start rounded-xl text-sm font-medium sm:pr-12 md:w-64 overflow-hidden group",
+          "relative h-12 w-full justify-start rounded-full lg:rounded-lg text-sm font-medium sm:pr-12 md:w-64 overflow-hidden group",
           "border border-[#B88746] bg-[#1a1a1a] text-[#f6e9cd]"
         )}
         {...props}
@@ -87,7 +87,7 @@ export function CommandMenu({ ...props }: DialogProps) {
           Search documentation...
         </span>
         <kbd className="mt-2 mr-1 absolute right-[0.3rem] top-[0.3rem] h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium border-[#B88746] bg-[#1a1a1a]/20 text-[#F6E8CD] sm:flex">
-          <span className="text-xs">⌘</span>K
+          <span className="text-xs pr-1 md:pr-0">⌘</span>K
         </kbd>
         {/* Shimmer Glimmer */}
         <motion.div
@@ -97,7 +97,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         />
         {/* Pulse Glow */}
         <motion.div
-          className="absolute -inset-px rounded-2xl border border-yellow-400/20 pointer-events-none"
+          className="absolute -inset-px rounded-lg border border-yellow-400/20 pointer-events-none"
           animate={{ opacity: [0.2, 0.6, 0.2] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
         />
