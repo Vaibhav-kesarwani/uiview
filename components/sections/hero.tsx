@@ -28,9 +28,9 @@ export default function Hero() {
       </h1>
 
       {/* Subtext */}
-      <p className="mt-5 text-base sm:text-lg text-gray-400 max-w-2xl sm:max-w-2xl lg:max-w-xl px-2">
-        Explore a curated collection of modern, high-quality UI components and
-        templates—crafted to help you build sleek, responsive applications
+      <p className="mt-5 text-wrap text-base font-medium sm:text-lg text-gray-400 max-w-xl">
+        Explore a curated collection of modern, high quality UI components and
+        templates crafted to help you build sleek, responsive applications
         faster and with confidence.
       </p>
     </div>
