@@ -1,0 +1,26 @@
+import { ComponentsNav } from "@/components/components-nav";
+import { docsConfig } from "@/config/docs";
+
+export default function ComponentsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="w-full">
+      <div className="mx-auto flex items-start px-4 py-6 md:grid md:grid-cols-[240px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-5">
+        {/* Sidebar */}
+        <aside className="fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky md:block">
+          <div className="no-scrollbar ml-4 h-full overflow-y-auto rounded-xl bg-background/70 px-4 py-6 shadow-md backdrop-blur-md transition-colors dark:bg-[#1e1e1e]/60 lg:ml-1 lg:py-8">
+            <ComponentsNav items={docsConfig.sidebarNav} />
+          </div>
+        </aside>
+
+        {/* Main Content */}
+        <main className="min-h-screen w-full overflow-hidden rounded-xl bg-muted/10 p-4 shadow-inner dark:bg-muted/20 sm:p-6 md:p-8">
+          {children}
+        </main>
+      </div>
+    </div>
+  );
+}
