@@ -19,7 +19,7 @@ export function FeatureCard() {
             key={i}
             header={item.header}
             className={cn(
-              "flex flex-col rounded-2xl border border-[#2b2b2b]",
+              "p-0.2 flex flex-col rounded-2xl border border-[#B88746]",
               i === 1 || i === 2 ? "md:col-span-2" : ""
             )}
           />
@@ -40,7 +40,7 @@ const SkeletonOne = () => (
       "relative md:min-h-64 rounded-2xl p-6",
       "flex flex-col items-center justify-center text-center",
       "bg-gradient-to-br from-[#1a1a1a] via-[#0e0e0e] to-[#1a1a1a]",
-      "text-[#f5e9d6] shadow-lg border border-[#2b2b2b]"
+      "text-[#f5e9d6] shadow-lg"
     )}
   >
     <div className="absolute inset-0 z-0 bg-[radial-gradient(#facc15_1px,transparent_1px)] [background-size:16px_16px] opacity-6" />
@@ -62,7 +62,7 @@ const SkeletonTwo = () => (
     initial={{ opacity: 0, y: 30 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, ease: "easeOut" }}
-    className="relative md:min-h-64 rounded-2xl p-6 shadow-xl border border-[#2f2f2f] bg-gradient-to-br from-[#141414] via-[#1c1c1c] to-[#141414] text-[#f5e9d6] flex flex-col justify-center text-center"
+    className="relative md:min-h-64 rounded-2xl p-6 shadow-xl bg-gradient-to-br from-[#141414] via-[#1c1c1c] to-[#141414] text-[#f5e9d6] flex flex-col justify-center text-center"
   >
     <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
       <div className="absolute -top-10 -left-10 w-60 h-60 bg-yellow-500/20 rounded-full blur-3xl animate-pulse" />
@@ -132,7 +132,7 @@ const SkeletonFour = () => (
     initial={{ opacity: 0, y: 30 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, ease: "easeInOut" }}
-    className="relative z-10 md:min-h-74 w-full rounded-xl p-6 shadow-lg backdrop-blur-md hover:shadow-2xl flex flex-col items-center justify-center text-center bg-gradient-to-br from-[#1c1c1c] via-[#131313] to-[#1c1c1c] border border-[#2b2b2b]"
+    className="relative z-10 md:min-h-74 w-full rounded-2xl p-6 shadow-lg backdrop-blur-md hover:shadow-2xl flex flex-col items-center justify-center text-center bg-gradient-to-br from-[#1c1c1c] via-[#131313] to-[#1c1c1c]"
   >
     <div className="absolute inset-0 z-0 bg-[radial-gradient(#facc15_1px,transparent_1px)] [background-size:16px_16px] opacity-6" />
 
