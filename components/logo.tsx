@@ -1,4 +1,5 @@
 import Link from "next/link";
+import packageJson from "../package.json";
 
 const Logo = () => {
   return (
@@ -24,7 +25,7 @@ const Logo = () => {
         <span className="text-2xl text-gray-300">view</span>
       </Link>
       <span className="relative rounded-md bg-muted px-2 h-4 mt-3.5 -ml-1 text-xs align-middle text-muted-foreground shimmer">
-        v1.0.0
+        v{packageJson.version}
       </span>
     </div>
   );
