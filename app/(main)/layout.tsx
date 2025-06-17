@@ -2,13 +2,13 @@ import { GoldenGlow } from "@/components/golden-glow";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
-interface MarketingLayoutProps {
+interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-export default async function MarketingLayout({
+export default async function MainLayout({
   children,
-}: MarketingLayoutProps) {
+}: MainLayoutProps) {
   return (
     <>
       <SiteHeader />
