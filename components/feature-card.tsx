@@ -19,7 +19,7 @@ export function FeatureCard() {
             key={i}
             header={item.header}
             className={cn(
-              "flex flex-col",
+              "flex flex-col rounded-2xl border border-[#2b2b2b]",
               i === 1 || i === 2 ? "md:col-span-2" : ""
             )}
           />
@@ -114,16 +114,16 @@ const SkeletonThree = () => (
     initial={{ opacity: 0, y: 30 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, ease: "easeOut" }}
-    className="relative rounded-2xl p-6 shadow-xl bg-gradient-to-br from-[#141414] via-[#1c1c1c] to-[#141414] text-[#f5e9d6] flex flex-col justify-center text-center"
+    className="relative h-full rounded-2xl shadow-xl bg-gradient-to-br from-[#141414] via-[#1c1c1c] to-[#141414] text-[#f5e9d6] flex flex-col justify-center text-center"
   >
     <VelocityScroll>
       <span className="text-xl md:text-4xl font-semibold tracking-wide text-[#f5e9d6]">
         Build Fast. Design Beautifully.
       </span>
     </VelocityScroll>
-    <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/50 to-transparent" />
-    <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black via-black/50 to-transparent" />
-    <div className="pointer-events-none absolute bottom-0 w-[60%] h-24 rounded-full blur-3xl bg-yellow-400/10" />
+    <div className="rounded-2xl pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/50 to-transparent" />
+    <div className="rounded-2xl pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black via-black/50 to-transparent" />
+    <div className="rounded-full pointer-events-none absolute bottom-0 w-[60%] h-24 blur-3xl bg-yellow-400/10" />
   </motion.div>
 );
 
