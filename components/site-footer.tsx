@@ -23,7 +23,9 @@ export function SiteFooter() {
             <p className="text-sm mt-2 text-gray-400">
               Uiview | Modern UI Component Library
             </p>
-
+            <p className="text-sm mt-2 text-gray-400">
+              Build by <Link href={"https://vaibhavkesarwani.vercel.app/"} target="_blank" className="text-[#D4AF37] text-md font-bold">@Vaibhav_Kesarwani</Link>
+            </p>
             <div className="mt-5">
               <h3 className="text-base font-semibold mb-2 text-gray-300 flex items-center">
                 <Link
