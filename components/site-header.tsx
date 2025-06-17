@@ -34,11 +34,11 @@ export function SiteHeader() {
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="mr-10 hidden lg:flex">
+          <div className="mr-2 hidden lg:flex">
             <LuxeButton />
           </div>
 
-          <div className="min-w-[250px] max-w-[200px] md:max-w-[280px]">
+          <div className="min-w-[250px] max-w-[200px] md:max-w-[280px] mr-2">
             <CommandMenu />
           </div>
 

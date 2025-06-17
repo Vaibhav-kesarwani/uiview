@@ -15,7 +15,7 @@ export function LuxeButton() {
       whileTap={{ scale: 0.97 }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="h-12 relative px-6 py-3 font-medium text-[#f6e9cd] bg-[#1a1a1a] border border-[#B88746] rounded-xl shadow-xl overflow-hidden group hover:shadow-yellow-500/30 transition-shadow duration-300"
+      className="h-12 relative px-6 py-3 font-medium text-[#f6e9cd] bg-[#1a1a1a] border border-[#B88746] rounded-lg shadow-xl overflow-hidden group hover:shadow-yellow-500/30 transition-shadow duration-300"
     >
       <span className="relative z-10 flex items-center gap-2">
         <motion.svg
@@ -49,7 +49,7 @@ export function LuxeButton() {
 
       {/* Pulse Glow */}
       <motion.div
-        className="absolute -inset-px rounded-2xl border border-yellow-400/20 pointer-events-none"
+        className="absolute -inset-px rounded-lg border border-yellow-400/20 pointer-events-none"
         animate={{
           opacity: [0.2, 0.6, 0.2],
         }}
